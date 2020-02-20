@@ -1,0 +1,92 @@
+/*
+==================================
+Table of Contents:
+
+1. Universal Element
+
+2. Enter Button
+
+3. Hamburger Nav
+
+==================================
+*/
+
+
+/*
+==================================
+1. Universal Element 
+==================================
+*/
+
+
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+==================================
+1. Enter Button
+==================================
+*/
+
+.landing-text {
+    position: relative;
+    text-align: center;
+    margin-top: 13%;
+}
+
+.landing-text h1 {
+    font-size: 60px;
+    margin-bottom: -25px !important;
+    color: #A61414;
+    overflow: hidden;
+    transition: 1.0s;
+}
+
+.landing-text h2 {
+    font-size: 30px;
+    color: #A61414;
+    overflow: hidden;
+    transition: 1.5s;
+}
+
+.enter-button {
+    font-family: 'Oswald', sans-serif;
+    border: 4px solid #A61414;
+    color: #A61414;
+    background: none;
+    margin-top: -25px !important;
+    font-size: 25px !important;
+    padding: 5px 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1.5s;
+}
+
+.enter-button:hover {
+    color: white;
+}
+
+.enter-button::before {
+    top: 0;
+    border-radius: 0 0 40% 40%;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #A61414;
+    z-index: -1;
+    transition: 0.9s;
+}
+
+.enter-button:hover::before {
+    height: 170%;
+}
+
+
