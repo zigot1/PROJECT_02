@@ -1,7 +1,8 @@
-const token = pm.environment.get('FORGE_TOKEN');
-const expires = pm.environment.get('TOKEN_EXPIRES_AT');
+//const token = pm.environment.get('FORGE_TOKEN');
+//const expires = pm.environment.get('TOKEN_EXPIRES_AT');
 const client_ID = 'ckmfsfg13rECvVslG6ynkxMYJirFzgiN';
 const client_Secret = 'tMhT8f69e2gja8RV'
+const callbackURL = 'https://www.getpostman.com/oauth2/callback'
 
 
 function getHubs(tokenSession, res) {
@@ -146,9 +147,9 @@ function startoAuth()
   var url =
     "https://developer.api.autodesk.com" +
     '/authentication/v1/authorize?response_type=code' +
-    '&client_id=' + config.credentials.client_id +
-    '&redirect_uri=' + config.callbackURL +
-    '&scope=' + config.scope.join(" ");
+    '&client_id=' + client_ID +
+    '&redirect_uri=' + callbackURL +
+    '&scope=' + 'data:read';//config.scope.join(" ");
   
   //pop out the dialog of use login and authorization 
     opn(url, function (err) {
