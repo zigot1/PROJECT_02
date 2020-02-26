@@ -40,6 +40,9 @@ a {
 2. Container
 ==================================
 */
+#site-text {
+  z-index: 4;
+}
 
 #site-text h1 {
     transform: translateY(23px);
@@ -64,9 +67,18 @@ a {
 ==================================
 */
 
+#map,
+body,
+html {
+  z-index: 1;
+  height: 97.4%;
+}
+
 #map {
-    height: 50%;
-    background-color: #A61414;
+  position: absolute;
+  align-items: center !important;
+  transform: translateX(13%) translateY(5em) !important;
+  width: 80%;
 }
 
 /*
@@ -76,7 +88,7 @@ a {
 */
 
 nav {
-    z-index: 3;
+    z-index: 5;
 }
 
 #hamburger {
@@ -292,5 +304,5 @@ nav {
 
 #sticky-footer {
     /*Change translate when map is inserted*/
-    transform: translateY(40em);
+    transform: translateY(60em);
 }
