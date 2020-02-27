@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <title>3-legged implicit grant test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- <script src="/static/js/script.js"></script> -->
+
+    </head>
+    <body onload="MyStuff.onLoad()">
+        <script>
+            var MyStuff = {
+                "access_token": "",
+                "LogIn": ["Log In", "Logged In"],
+                "onLoad": function () {
+                    console.log("onLoad")
+
+                    var url = new URL(window.location.href.replace('#', '?'))
+
+                    var query_string = url.search
+
+                    var search_params = new URLSearchParams(query_string)
+
+                    MyStuff.access_token = search_params.get('access_token')
+
+                    let logInButton = document.getElementById("LogIn")
+                    //let ProjectButton = document.getElementById("ProjectInfo")
+                    logInButton.innerText = (MyStuff.access_token) ? MyStuff.LogIn[1] : MyStuff.LogIn[0]
+                    //ProjectButton.innerText = (MyStuff.access_token) ? MyStuff.LogIn[1] : MyStuff.LogIn[0]
+
+                    console.log(MyStuff.access_token)
+                },
+                //////////////////////////////////////////////////////////
+                "getUserInfo": function () {
+                    console.log("getUserInfo")
+
+                    if (MyStuff.access_token === "") 
+                        return
+
+                    fetch('https://developer.api.autodesk.com/userprofile/v1/users/@me', { 
+                        headers: {
+                            'Authorization': `Bearer ${MyStuff.access_token}`
+                        }
+                    })
+                    .then(res => res.text())
+                    .then(data => {
+                        let json = JSON.parse(data)
+                        let pretty = JSON.stringify(json, null, 2)
+                        MyStuff.showInfo(pretty)
+                        console.log(data)
+                    })
+                },
+                ////////////////////////////////////////////////////////////
+                "getHubInfo": function () {
+                    console.log("getHubInfo")
+
+                    if (MyStuff.access_token === "") 
+                        return
+
+                    fetch('https://developer.api.autodesk.com/project/v1/hubs', { 
+                        headers: {
+                            'Authorization': `Bearer ${MyStuff.access_token}`
+                        }
+                    })
+                    .then(res => res.text())
+                    .then(data => {
+                        let json = JSON.parse(data)
+                        let pretty = JSON.stringify(json, null, 2)
+                        MyStuff.showHubInfo(pretty)
+                        console.log(data)
+                    })
+                },
+                //////////////////////////////////////////////////////////////
+                "getProjectInfo": function () {
+                    console.log("getProjectInfo")
+
+                    if (MyStuff.access_token === "") 
+                        return
+
+                    fetch('https://developer.api.autodesk.com/project/v1/hubs/b.49df69ab-c266-4d49-951c-031b16f7a31f/projects', { 
+                        headers: {
+                            'Authorization': `Bearer ${MyStuff.access_token}`
+                        }
+                    })
+                    .then(res => res.text())
+                    .then(data => {
+                        let json = JSON.parse(data)
+                        let pretty = JSON.stringify(json, null, 2)
+                        // MyStuff.showProjectInfo(pretty)
+                        //console.log(data)
+                    })
+                    fetch ('/token', {
+                        method: 'POST',
+                        //body: pretty
+                    })
+                    .then (function (response){ return response.text();})
+                    .then(function(text){console.log('POST response: ');
+                    console.log(text);
+                    })
+                },
+                //////////////////////////////////////////////////////////////
+                ///         PUSH DATA TO MONGO
+                //////////////////////////////////////////////////////////////
+                "pushCSV": function() {
+                    // GET is the default method, so we don't need to set it
+                                fetch('/pushdata')
+                                    .then(function (response) {
+                                        return response.text();
+                                        }).then(function (text) {
+                                    console.log('GET response text:');
+                                    console.log(text); // Print the greeting as text
+                                    });
+
+                    // Send the same request
+                                fetch('/pushdata')
+                                    .then(function (response) {
+                                        return response.json(); // But parse it as JSON this time
+                                        })
+                                    .then(function (json) {
+                                        console.log('GET response as JSON:');
+                                        console.log(json); // Here’s our JSON object
+                                    })
+                },
+                //////////////////////////////////////////////////////////////
+                ///         GET DATA FROM MONGO
+                //////////////////////////////////////////////////////////////
+                "getData": function() {
+                    // POST
+                                fetch('/getdata', {
+
+                                // Specify the method
+                                method: 'POST',
+
+                            // A JSON payload
+                            body: JSON.stringify({
+                                "greeting": "Hello from the browser!"
+                                })
+                                }).then(function (response) { // At this point, Flask has printed our JSON
+                                return response.text();
+                                }).then(function (text) {
+
+                                console.log('POST response: ');
+
+                                // Should be 'OK' if everything was successful
+                                console.log(text);
+                            });
+                },
+
+                ///////////////////////////////////////////////////////////////
+                "getProject": function () {
+                    console.log("getProject")
+
+                    if (MyStuff.access_token === "") 
+                        return
+
+                    fetch('https://developer.api.autodesk.com/hq/v1/accounts/49df69ab-c266-4d49-951c-031b16f7a31f/projects', { 
+                        headers: {
+                            'Authorization': `Bearer ${MyStuff.access_token}`
+                        }
+                    })
+                    .then(res => res.text())
+                    .then(data => {
+                        let json = JSON.parse(data)
+                        let pretty = JSON.stringify(json, null, 2)
+                        MyStuff.showProject(pretty)
+                        console.log(data)
+                    })
+                },
+                ////////////////////////////////////////////////////////////////
+                "logIn": function () {
+                    console.log("logIn")
+
+                    let clientId = "ysAEIbQHJGEX0LbuPUI2d2ACu1adNPFi" 
+                    let scopes = "data:read+data:write+data:create+data:search+bucket:read+bucket:update+account:read+account:write"
+                    let redirectUri = encodeURI("http://localhost:5000")
+                    //let redirectUri = encodeURI("https://www.getpostman.com/oauth2/callback")
+                    console.log(redirectUri);
+                    window.open(`https://developer.api.autodesk.com/authentication/v1/authorize` +
+                        `?response_type=token&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}`, "_self")
+                },
+                ////////////////////////////////////////////////////////////////
+                "logIn2": function () {
+                    console.log("logIn2")
+                    var myHeaders = new Headers();
+                        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+                        myHeaders.append("Authorization", "Bearer ",MyStuff.access_token );
+                    
+                        var urlencoded = new URLSearchParams();
+                            urlencoded.append("client_id", "CA9W5KNEWI5YW6MAyYIXVSHBaSs3iA4L");
+                            urlencoded.append("client_secret", "AnmVcWf29x82odX5");
+                            urlencoded.append("grant_type", "client_credentials");
+                            urlencoded.append("scope", "account:write account:read data:write data:create data:read bucket:read bucket:create");
+                            var requestOptions = {
+                                method: 'POST',
+                                headers: myHeaders,
+                                body: urlencoded,
+                                redirect: 'follow'
+                                };
+                                fetch("https://developer.api.autodesk.com/authentication/v1/authenticate", requestOptions)
+                                        .then(response => response.text())
+                                        .then(result => console.log(result))
+                                        .catch(error => console.log('error', error));
+                    // let clientId = "ysAEIbQHJGEX0LbuPUI2d2ACu1adNPFi" 
+                    // let clientSecret = "De8369d15a6a14d1"
+                    // let grantType = "client_credentials"
+                    // let scopes = "data:read+data:write+data:create+data:search+bucket:read+bucket:update+account:read+account:write"
+                    // let redirectUri = encodeURI("http://localhost:8000")
+                    // //let redirectUri = encodeURI("https://www.getpostman.com/oauth2/callback")
+                    // console.log(redirectUri);
+                    // window.open(`https://developer.api.autodesk.com/authentication/v1/authenticate` +
+                    //     `?response_type=token&client_id=${clientId}&`+
+                    //     // `redirect_uri=${redirectUri}&`+
+                    //     `client_secret=${clientSecret}&`+
+                    //     `grant_type=${grantType}`+
+                    //     `scope=${scopes}&`, "_self")
+                },
+
+
+
+                ////////////////////////////////////////////////////////////////
+                "showInfo": function (text) {
+                    let logInButton = document.getElementById("Info")
+                    logInButton.value = text
+                },
+                "showHubInfo": function (text) {
+                    let logInButton = document.getElementById("infoHub")
+                    logInButton.value = text
+                },
+                "showProjectInfo": function (text) {
+                    let logInButton = document.getElementById("infoProject")
+                    logInButton.value = text
+                },
+                "showProject": function (text) {
+                    let logInButton = document.getElementById("Project")
+                    logInButton.value = text
+                }
+            }
+        </script>
+        <button id="LogIn" onclick="MyStuff.logIn()">Log In</button>
+        <button id="LogIn2" onclick="MyStuff.logIn2()">Log In 2</button>
+        <br /><br />
+        <button id="GetUserInfo" onclick="MyStuff.getUserInfo()">Get User Info</button> 
+        <button id="HubInfo" onclick="MyStuff.getHubInfo()">Get Hub Info</button>
+        <button id="ProjectInfo" onclick="MyStuff.getProjectInfo()">Get Projects</button> 
+        <br /><br />
+        <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
+        <br /><br />
+        <button id="pushCSV" onclick="MyStuff.pushCSV()">Push Data to Mongo</button> 
+        <br /><br />
+        <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button> 
+        <br /><br />
+        <textarea id="Info"></textarea>  
+        <br/><br/>
+        <textarea id="infoHub"></textarea> 
+        <br/><br/>
+        <textarea id="infoProject"></textarea>  
+        <br/><br/>
+        <textarea id="Project"></textarea>    
+        <footer>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </footer>
+      
+    </body>
+</html>
