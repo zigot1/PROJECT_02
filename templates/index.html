@@ -111,16 +111,6 @@
                                     console.log('GET response text:');
                                     console.log(text); // Print the greeting as text
                                     });
-
-                    // Send the same request
-                                fetch('/pushdata')
-                                    .then(function (response) {
-                                        return response.json(); // But parse it as JSON this time
-                                        })
-                                    .then(function (json) {
-                                        console.log('GET response as JSON:');
-                                        console.log(json); // Here’s our JSON object
-                                    })
                 },
                 //////////////////////////////////////////////////////////////
                 ///         GET DATA FROM MONGO
@@ -137,13 +127,15 @@
                                 "greeting": "Hello from the browser!"
                                 })
                                 }).then(function (response) { // At this point, Flask has printed our JSON
+                                    //logInButton.value = response.text();
                                 return response.text();
                                 }).then(function (text) {
 
                                 console.log('POST response: ');
 
                                 // Should be 'OK' if everything was successful
-                                console.log(text);
+                                //console.log(text);
+                                jsonReturn.value = text
                             });
                 },
 
@@ -234,6 +226,10 @@
                 "showProject": function (text) {
                     let logInButton = document.getElementById("Project")
                     logInButton.value = text
+                },
+                "showJson": function (text) {
+                    let logInButton = document.getElementById("jsonReturn")
+                    logInButton.value = text
                 }
             }
         </script>
@@ -256,7 +252,9 @@
         <br/><br/>
         <textarea id="infoProject"></textarea>  
         <br/><br/>
-        <textarea id="Project"></textarea>    
+        <textarea id="Project"></textarea>  
+        <br/><br/>
+        <textarea id="jsonReturn"></textarea>   
         <footer>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         </footer>

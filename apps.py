@@ -28,7 +28,7 @@ def populProjects():
     cleanData = pd.DataFrame(data[['id','bim360_account_id','status','name','start_date','type','value','postal_code']])
     activeProjects = cleanData[(cleanData['status'] == 'active' )& (cleanData['value'] > 5000000)]
     usableProjects = activeProjects.dropna(how='any')
-    usableProjects.count()
+    print(usableProjects.count())
     #conn = 'mongodb://localhost:27017'
     #client = pymongo.MongoClient(conn)
     #dbName = "B360_CONN"
@@ -40,6 +40,18 @@ def populProjects():
     db_cm.delete_many
     db_cm.insert_many(data_json)
 
+def pushJson():
+    collection_name = 'clean_projects'
+    db_cm = db[collection_name]
+    projects = db_cm.find()
+    List = []
+
+    for project in projects:
+        v = project
+        del v['_id']
+        print(v)
+        List.append(v)
+    return (json.dumps(List))
 ####Call Scrapping Function
 ##scrape.Mars_scrape(db)
 #### Scrapping completed
@@ -53,34 +65,28 @@ def index():
     ## Route 01
     return render_template("index.html")
     ###, Articles=Articles , DayImage=DayImage, Weather=Weather, Data=Data, Hemi=Hemi)
-
-###Set route get csv data
-@app.route('/pushdata', methods=['GET','POST'])
-def push2mongo ():
-    # POST request
-    if request.method == 'POST':
-        print('Incoming..')
-        print(request.get_json())  # parse as JSON
-        return 'OK', 200
-
-    # GET request
-    else:
-        message = {'greeting':'Hello from Flask!'}
-        populProjects()
-        return jsonify(message)  # serialize and use JSON headers
-##################################################################
+#####################################################################################
+####            GET DATA
+########################################################################################
 ###Set route get csv data
 @app.route('/getdata', methods=['GET','POST'])
 def push2js ():
     # POST request
     if request.method == 'POST':
         print('Incoming..')
-        print(request.get_json())  # parse as JSON
-        return 'OK', 200
-
+        #print(request.get_json())  # parse as JSON
+        #return 'OK-message received', 200
+        return jsonify(eval(pushJson()))
     # GET request
     else:
-        message = {'greeting':'Hello from Flask!'}
+        message = {'greeting':'GET-DATA Hello from Flask!'}
+        #populProjects()
+        return jsonify(eval(pushJson()))  # serialize and use JSON headers
+##################################################################
+###Set route get csv data
+@app.route('/pushdata', methods=['GET','POST'])
+def push2mongo ():
+        message = {'greeting':'Projects Populated  !'}
         populProjects()
         return jsonify(message)  # serialize and use JSON headers
 ##################################################################

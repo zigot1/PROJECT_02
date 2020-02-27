@@ -1,0 +1,803 @@
+[
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e5c196de-27ac-43f1-ad9a-e7267316ed9f", 
+      "name": "Memorial Stadium", 
+      "postal_code": "61820", 
+      "start_date": "Mon Jan 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Stadium/Arena", 
+      "value": 78000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "ecee877d-e66c-411c-88ef-3b4f0afbfd1f", 
+      "name": "10104945 - Brandon Road Relocation", 
+      "postal_code": "60421", 
+      "start_date": "Sat Feb 01 2020 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Streets / Roads / Highways", 
+      "value": 9000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "800194cf-13d3-47df-9ad1-fe5d2a64d6ca", 
+      "name": "10103177 - Rockwool Ran5", 
+      "postal_code": "25442", 
+      "start_date": "Mon Sep 03 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 53362230.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "3431b76d-ba63-4c83-8c99-4c88d0ef98a8", 
+      "name": "10104980 - Bridgeport Amazon TI", 
+      "postal_code": "30263", 
+      "start_date": "Mon Jan 27 2020 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 58000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e1b87d21-aef7-4fad-a518-491a4f681463", 
+      "name": "00-03925.258-000_SP_Sproul_Hall", 
+      "postal_code": "16802", 
+      "start_date": "Wed May 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 55000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "74a8f627-6ec5-4c7c-8d48-ed5a75d41b60", 
+      "name": "00-03925.246-000_GH_Geary_Hall", 
+      "postal_code": "16802", 
+      "start_date": "Wed May 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 55000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e09a120b-430b-4069-b251-b90dd2e2c7ac", 
+      "name": "10102550-Dominion_Workplace_Tower_1", 
+      "postal_code": "23219", 
+      "start_date": "Tue Jan 12 2016 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 311748734.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "cd37cf72-5681-4506-a9df-b1dc3bd1a27f", 
+      "name": "10102666_Pfizer 2.0", 
+      "postal_code": "63017", 
+      "start_date": "Mon May 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Research Facility / Laboratory", 
+      "value": 125000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "96ab1e3f-d8f3-460e-867e-f28433b7db5a", 
+      "name": "10102480 - UIUC Design Center 2", 
+      "postal_code": "61820", 
+      "start_date": "Fri Jun 29 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Performing Arts", 
+      "value": 40000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "7548059a-ac11-4374-9e00-11ec3def012b", 
+      "name": "00-04724.250-000_MH_McKean_Hall", 
+      "postal_code": "16802", 
+      "start_date": "Mon May 08 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 18500000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "7ff36e52-ecad-412f-9bb9-3087d0b8df88", 
+      "name": "00-04724.251-000_PP_Pennypacker_Hall", 
+      "postal_code": "16802", 
+      "start_date": "Mon May 08 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 17800000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "36e80ce0-98d3-4a07-8e36-634b9910cea4", 
+      "name": "10103550 - DuPont Building B (Spec 2)", 
+      "postal_code": "98327", 
+      "start_date": "Fri Aug 23 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 24260535.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "ee2bfe62-09e4-434d-8c98-0f0cda6a68a5", 
+      "name": "10102358-Bridgeport_Building_B", 
+      "postal_code": "30263", 
+      "start_date": "Thu Aug 09 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 25841190.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "21178c76-185e-433d-a691-5d6119d10f64", 
+      "name": "10103065 - Anixter Warehouse OKC", 
+      "postal_code": "OK", 
+      "start_date": "Fri Mar 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 10000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "aef06075-b782-4a17-b720-1985c85fb3bf", 
+      "name": "10104895 - Amazon G4.5 Pontiac MI", 
+      "postal_code": "48342", 
+      "start_date": "Mon Oct 21 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 274378271.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "76b8f3fe-877e-4719-b832-ca801467a258", 
+      "name": "10102710-Harbor_Freight_Tools", 
+      "postal_code": "29536", 
+      "start_date": "Mon Oct 16 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 58230553.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "5a7ade0f-818d-4a2d-bee9-7e7115b2e7dd", 
+      "name": "WUSM Mid Campus Center (MCC)", 
+      "postal_code": "63110", 
+      "start_date": "Fri May 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Medical Office", 
+      "value": 92000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "1f683718-4980-4f7f-a378-c0ae1f65497f", 
+      "name": "10104576 - Emig Road", 
+      "postal_code": "17406", 
+      "start_date": "Thu May 16 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 13080108.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e176d4da-8258-443b-99b0-83b46f874c54", 
+      "name": "10104894 - Amazon AMZL Pontiac MI", 
+      "postal_code": "48342", 
+      "start_date": "Mon Oct 21 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 38380907.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "0fa771cf-a0cd-4ec7-b777-85bbd33fd832", 
+      "name": "60103255-Macy's Chicago", 
+      "postal_code": "60602", 
+      "start_date": "Wed Mar 15 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 120000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "d91a9c78-1425-4078-b531-d52d4c0402df", 
+      "name": "10104563 - SKBA  Phase 1", 
+      "postal_code": "30529", 
+      "start_date": "Wed May 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 100000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "6a21c043-6c89-4e3b-91a4-764b86661326", 
+      "name": "10102389 - Dollar General NY", 
+      "postal_code": "12010", 
+      "start_date": "Mon Apr 03 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 75000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "14c8029b-1daf-4fdc-ae19-a5932d354db3", 
+      "name": "10103376 - Blue Point", 
+      "postal_code": "53158", 
+      "start_date": "Thu Dec 13 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 29954578.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "162fe9a7-d1b6-43a3-8324-6f6a6fcc7b71", 
+      "name": "10104688 - Inland 85 Building C", 
+      "postal_code": " 29651", 
+      "start_date": "Tue Oct 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 14000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e86bf674-39d7-4ba4-8682-c82f1fd85b1e", 
+      "name": "10102850 - Penn State East Halls Phase 1C", 
+      "postal_code": "16801", 
+      "start_date": "Wed Oct 18 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 75354606.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "aece2f96-e7d5-4916-a094-dd12220da51a", 
+      "name": "10104349 - Blue Engine", 
+      "postal_code": "35806", 
+      "start_date": "Sat Dec 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 68000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "765f5372-8242-4249-9e08-b29dc1595f2a", 
+      "name": "10104560 - EDGE @ BRDG", 
+      "postal_code": "63132", 
+      "start_date": "Tue Apr 09 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Research Facility / Laboratory", 
+      "value": 18000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "3eb5bcde-81d5-4bb6-8c3b-a3356fd4d9ef", 
+      "name": "10103549 - Dupont Building A", 
+      "postal_code": "98327", 
+      "start_date": "Tue Oct 09 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 32397884.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "b75e9763-eba6-4a2d-94a4-b69c40e72652", 
+      "name": "601-04182-ESI 3 - Lab 3.0", 
+      "postal_code": "63134", 
+      "start_date": "Mon Oct 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Research Facility / Laboratory", 
+      "value": 10000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "d6336eba-c4e9-43eb-b864-83ce4372eb69", 
+      "name": "10104960 - Centene Carondelet Lobby Remodel", 
+      "postal_code": "63105", 
+      "start_date": "Fri Nov 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 5500000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "b3ed4fac-47bb-43fb-bdd3-3973af5cd19a", 
+      "name": "10102939 - Memorial Stadium JV", 
+      "postal_code": "61820", 
+      "start_date": "Wed Mar 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Recreation Building", 
+      "value": 90000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "4bdce6aa-56c6-42cf-bc3d-6be4adee8faa", 
+      "name": "00-04724.262-000_NB_New_Hall_1B", 
+      "postal_code": "16802", 
+      "start_date": "Thu Apr 13 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 40000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "4c3d6388-16b9-4a0a-bdca-16bd7f41074c", 
+      "name": "10104699 - WUSM Couch Lab Building - 1st Floor Buildout", 
+      "postal_code": "63110", 
+      "start_date": "Mon Jul 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Research Facility / Laboratory", 
+      "value": 7000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "1b5c6a02-7024-4847-aefb-00c9d986507b", 
+      "name": "Pfizer Existing Inventory", 
+      "postal_code": "63017", 
+      "start_date": "Sun Feb 19 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Research Facility / Laboratory", 
+      "value": 160000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "1a97e97d-488f-45bb-92e8-811b33065d25", 
+      "name": "10104414 - Project Arcilla", 
+      "postal_code": "92154", 
+      "start_date": "Sat Feb 15 2020 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 225000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "95ac7350-55dc-4231-bbc7-5d20b6121a0d", 
+      "name": "10103123_Interchange 55 Logistics Park", 
+      "postal_code": "60446", 
+      "start_date": "Thu Mar 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 56709371.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "732f1a05-1920-429a-aa95-998e3e2d2672", 
+      "name": "10104732 - Tarpon 3.0 at Cross Roads 55", 
+      "postal_code": "60410", 
+      "start_date": "Tue Sep 17 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 90000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "de1639d1-bf20-4771-a282-e192ec46692d", 
+      "name": "10104741 - Benson Hill Tenant Build Out", 
+      "postal_code": "63132", 
+      "start_date": "Mon Jul 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 10500000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "04e25db2-5873-4b5e-8703-4bc1463d8989", 
+      "name": "10104659 - New Castle", 
+      "postal_code": "PA", 
+      "start_date": "Mon Jun 03 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 33000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "143f40ae-cc25-457a-9aad-b6b1c8c33b95", 
+      "name": "10103342_CENTENE U-ECE CENTER", 
+      "postal_code": "63105", 
+      "start_date": "Mon Jun 25 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Education Facility", 
+      "value": 25000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "fc67e7c1-5686-4424-8d0b-9aeb58a356c9", 
+      "name": "10104412_Project_Cayman", 
+      "postal_code": "45377", 
+      "start_date": "Mon Dec 03 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 19589569.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "47ee90ea-ffaa-41c3-a912-d7aae8a1bc38", 
+      "name": "10103519-Project_Quickstart", 
+      "postal_code": "61109", 
+      "start_date": "Mon Jun 04 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 28125992.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "2f347b57-09cb-48ad-b0a3-0684206d0528", 
+      "name": "10102774 - Jet Aviation", 
+      "postal_code": "91406", 
+      "start_date": "Mon Mar 04 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 42500000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "c6446258-94a5-42b5-8257-68459a5d8796", 
+      "name": "10103445-Dollar_General_Longview", 
+      "postal_code": "75605", 
+      "start_date": "Tue Nov 27 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 71000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "65c665e9-d565-458e-be41-48a06fcdbffa", 
+      "name": "40118_Mercy_Hospital_South_Cancer_Center", 
+      "postal_code": "63128", 
+      "start_date": "Tue Jan 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Hospital", 
+      "value": 18000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "d6c662df-910d-4263-9390-71b0de815cfc", 
+      "name": "WUSM EH&S Building ", 
+      "postal_code": "63110", 
+      "start_date": "Mon May 05 2014 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Other Institutional Buildings", 
+      "value": 8528387.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "d3493554-3819-4988-ae06-dd62cf28d062", 
+      "name": "10104069-Project_Cherry", 
+      "postal_code": "92651", 
+      "start_date": "Tue Sep 04 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 161000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "8408394f-a7b3-4180-99fc-2551c7ab40aa", 
+      "name": "BF104640 Newlyweds Food", 
+      "postal_code": "60639", 
+      "start_date": "Mon Jul 15 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 40000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "8c8a470e-1b26-4f53-bf17-a0c32062fe74", 
+      "name": "10101855 - Penn State East Halls Phase 1A", 
+      "postal_code": "16801", 
+      "start_date": "Fri Jan 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitories", 
+      "value": 57900000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "ff827bff-8583-4efe-9059-6e11dbc64f47", 
+      "name": "10104094 - Project_Bronco", 
+      "postal_code": "83687", 
+      "start_date": "Fri Aug 10 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 147000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "0bd50591-c3db-4c44-a698-ffd2a7ae886f", 
+      "name": "10103436 - Project Dayton Field2.0", 
+      "postal_code": "37321", 
+      "start_date": "Mon Nov 13 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 112718983.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "9ade7ae9-dada-4b4e-9a5a-8c2106c55cd9", 
+      "name": "10103738 - Kohl's Project 66", 
+      "postal_code": "43062", 
+      "start_date": "Mon Aug 06 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 58800000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "328437c3-2ac8-4b4b-847d-0e221871b23e", 
+      "name": "10103730 - Centene Hanley Tower TI", 
+      "postal_code": "63105", 
+      "start_date": "Tue Nov 20 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 34000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "9f14a48e-0dbb-4c80-b8f4-6afe48cdf29c", 
+      "name": "10103287-Resolute_Forest_Products", 
+      "postal_code": "37309", 
+      "start_date": "Fri Dec 15 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 13832998.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "8d1b3747-e7f2-4e2d-bc86-e394242c840c", 
+      "name": "10103255 - Macy's Chicago", 
+      "postal_code": "60602", 
+      "start_date": "Mon Jun 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 120000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e31eacd9-5a2d-4c21-a0d2-354ad6e8289b", 
+      "name": "10103648 - 215 Peoria", 
+      "postal_code": "60607", 
+      "start_date": "Mon Oct 29 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 26893840.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "fae2c3af-ad87-477d-b003-57cc2823f931", 
+      "name": "10103714 - PSU West Campus Garage", 
+      "postal_code": "16802", 
+      "start_date": "Wed Sep 05 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Parking Structure / Garage", 
+      "value": 55000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "a4215c37-a0a8-4fd0-bfbd-fbd87878c93a", 
+      "name": "10103283-CITI_Sioux_Falls", 
+      "postal_code": "57108", 
+      "start_date": "Wed Nov 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 35000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "72792ed7-f488-46db-b357-620a8733fbfb", 
+      "name": "10103308 - Inland 85 Building A", 
+      "postal_code": "29334", 
+      "start_date": "Thu Aug 09 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 14863264.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "bd25b19e-8398-4c4c-ae3f-5c60a66b78b9", 
+      "name": "10102590 - One Hundred Kingshighway", 
+      "postal_code": "63108", 
+      "start_date": "Tue Jul 18 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Multi-Family Housing", 
+      "value": 113999984.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "8ac049b7-7894-4481-9bf9-12e488dc78a9", 
+      "name": "10102684-Centene_Campus", 
+      "postal_code": "63130", 
+      "start_date": "Tue Mar 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 750000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "ae68eff9-cf9c-47a2-bb95-05a516eeb3ac", 
+      "name": "10104583_Volkswagen", 
+      "postal_code": "37421", 
+      "start_date": "Sun Sep 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 70000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "d85bd801-8c58-4e09-966c-5eaf9551de31", 
+      "name": "017-VDC-BIM360_FIELD_TRAINING", 
+      "postal_code": "63114", 
+      "start_date": "Wed Mar 15 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Office", 
+      "value": 1000000000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "d2310a2c-8320-49b5-b43e-97260b67c88d", 
+      "name": "10102944 - SCAD Atlanta", 
+      "postal_code": "30303", 
+      "start_date": "Wed Oct 04 2017 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Dormitory", 
+      "value": 46686936.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "3c07f72e-e31c-46b2-8327-60e01333cc97", 
+      "name": "10103668 - MWH04 05 Field 1.0", 
+      "postal_code": "98848", 
+      "start_date": "Wed Aug 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Data Center", 
+      "value": 470000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "7ebf2a58-770e-47ab-becd-fff7e07d1c97", 
+      "name": "BF0104685-Mercy_StL_OPC", 
+      "postal_code": "63105", 
+      "start_date": "Wed May 08 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "OutPatient Surgery Center", 
+      "value": 90000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "f2c82443-0e72-4f2c-9cb7-be050e3d758d", 
+      "name": "10104931 - Nicklies - Louisville Airpark", 
+      "postal_code": "40219", 
+      "start_date": "Sun Mar 15 2020 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 20000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "07908ff8-9cf2-45b9-8a73-1f28ebe825aa", 
+      "name": "10104833 - Project First Base", 
+      "postal_code": "95837", 
+      "start_date": "Mon Sep 30 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 10104833.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "06e4c087-736d-49fd-bfc9-102259182bb3", 
+      "name": "10104676 - Archbald", 
+      "postal_code": "18403", 
+      "start_date": "Mon Aug 12 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 34000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "93cdf270-96b8-405c-9296-08e33fe96b8c", 
+      "name": "10104658 - Hawks Prairie Building 1", 
+      "postal_code": "98516", 
+      "start_date": "Mon Jun 17 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 100842000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "1e1cdcd0-4bed-4137-ba4e-e6a388f71de2", 
+      "name": "10104553-Project Dilly Dilly", 
+      "postal_code": "43207", 
+      "start_date": "Wed Jul 10 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 12738956.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "e6c4b36a-3f0a-4660-8f56-630755715b69", 
+      "name": "10104505 - Blue Origin Chemical Processing Facility", 
+      "postal_code": "32953", 
+      "start_date": "Sun Dec 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 42574137.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "9a6aa6b9-e65f-4470-9d7f-bc2e5b94fc8e", 
+      "name": "10104487 - Harmony Road", 
+      "postal_code": "08056", 
+      "start_date": "Mon Sep 16 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 12071433.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "794f4327-9057-4430-beb3-3f29b5bb6a84", 
+      "name": "10104480 - Huff Road", 
+      "postal_code": "08056", 
+      "start_date": "Mon Sep 30 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 13488053.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "79e84063-c9e4-42e8-9166-b90295517128", 
+      "name": "10104627 Quincy MWH06", 
+      "postal_code": "98848", 
+      "start_date": "Thu Aug 15 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Data Center", 
+      "value": 250000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "913300af-4c4f-4c2b-affe-5e54789d3564", 
+      "name": "10104721 - NP Hawks Prairie Building 2 Spec", 
+      "postal_code": "98516", 
+      "start_date": "Mon Jun 17 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 18712000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "5125dfe0-ace0-4ad1-b74e-48c7f4aed6fb", 
+      "name": "10104465 - Inland Port VII", 
+      "postal_code": "66030", 
+      "start_date": "Mon Sep 30 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 25000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "0ff29bad-cd5a-4de5-bf13-373d4356e019", 
+      "name": "10104747 - MSFC Engine Test Facility", 
+      "postal_code": "35808", 
+      "start_date": "Sun Jul 07 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 50000000.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "88196ace-66d3-492a-8270-77938d3501aa", 
+      "name": "10104224-Chewy", 
+      "postal_code": "45377", 
+      "start_date": "Mon Oct 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Manufacturing / Factory", 
+      "value": 26855095.0
+    }, 
+    {
+      "bim360_account_id": "49df69ab-c266-4d49-951c-031b16f7a31f", 
+      "id": "69bb62b9-8abd-4b2d-8393-abb625f1023c", 
+      "name": "10104186 - Project Kodiak", 
+      "postal_code": "28146", 
+      "start_date": "Mon Jun 17 2019 00:00:00 GMT+0000 (Coordinated Universal Time)", 
+      "status": "active", 
+      "type": "Warehouse (non-manufacturing)", 
+      "value": 26748673.0
+    }
+  ]
+  
