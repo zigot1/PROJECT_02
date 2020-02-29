@@ -67,7 +67,7 @@ nav {
 
 #hamburger {
     position: fixed;
-    width: 400px;
+    width: 300px;
     height: 100% !important;
     background: #A61414 !important;
     left: -400px;

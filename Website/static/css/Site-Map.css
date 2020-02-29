@@ -6,6 +6,7 @@ Table of Contents:
 
 2. Container
     - 2.1 Map Styling
+    - 2.2 Info Box
 
 3. Hamburger Nav
 
@@ -35,6 +36,12 @@ a {
     color: inherit !important;
 }
 
+ ul li {
+  list-style-type: none !important;
+  color: #A61414;
+  margin-left: 4px;
+}
+
 /*
 ==================================
 2. Container
@@ -58,19 +65,19 @@ a {
 }
 
 #site {
-    transform: translateY(4em);
+    transform: translateY(3em);
 }
 
-#filter-container {
+/* #filter-container {
   transform: translateY(5em);
-}
+} */
 
-#filter-container {
-  width: 435px;
+/* #filter-container {
+  width: 100px;
   padding: 10px;
-}
+} */
 
-#filter-container #site-drop {
+#info-box #site-drop {
   background-color: #A61414;
   color: white;
   font-size: 20px;
@@ -94,8 +101,25 @@ html {
   position: absolute;
   align-items: center !important;
   transform: translateX(13%) translateY(10em) !important;
-  width: 80%;
+  width: 50%;
 }
+
+/*
+==================================
+2.2 Info Box 
+==================================
+*/
+#info {
+  position: absolute;
+  transform: translateX(200%) translateY(10em) !important;
+  width: 500px;
+}
+
+#info #info-box h3 {
+  color: #A61414;
+  font-weight: lighter;
+}
+
 
 /*
 ==================================
@@ -109,7 +133,7 @@ nav {
 
 #hamburger {
     position: fixed;
-    width: 400px;
+    width: 300px;
     height: 100% !important;
     background: #A61414 !important;
     left: -400px;
@@ -170,7 +194,7 @@ nav {
 ==================================
 */
 
-.container {
+.container, #map, #info {
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 8s;
     -moz-animation: fadeIn ease 8s;
@@ -318,5 +342,5 @@ nav {
 
 #sticky-footer {
     /*Change translate when map is inserted*/
-    transform: translateY(64em);
+    transform: translateY(100em);
 }

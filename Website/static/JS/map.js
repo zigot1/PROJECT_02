@@ -22,31 +22,57 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 
-// function map_drop() {
-//     //Import json file
-//     d3.json('static/JS/projects.json', function(err, data) {
-//         if (err) console.log("Trouble loading data.");
-//         // console.log(data);
+function map_drop() {
+    //Create universal selection in function
+    let selected_value = d3.select("#site-drop").node().value;
+    //========================================================================
+    //Import json file
+    d3.json('static/JS/projects.json', function(err, data) {
+        if (err) console.log("Trouble loading data.");
+        // console.log(data);
        
-//         function append_drop(value) {
+        function append_drop(value) {
 
-//             let selection = d3.select("#site-drop");
+            let selection = d3.select("#site-drop");
             
-//             //clears exist values in dropdown list
-//             selection.html("");
+            //clears exist values in dropdown list
+            selection.html(" ");
 
-//             value.forEach((n) => {
-//                 console.log(n.name);
-//                 let options = selection.append("option");
-//                     options.text(n.name);
-//             });
+            value.forEach((n) => {
+                console.log(n.postal_code);
+                let options = selection.append("option");
+                    options.text(n.postal_code);
+            });
 
-//         }
+            //========================================================================
+            //function to populate info box
+            function info_box(data) {
+                console.log(data);
 
-//         append_drop(data);
-     
-//     });
-// }
+                let info_selection = d3.select("#list-info");
+
+                info_selection.html(" ");
+
+                Object.entries(data).forEach(([key, info]) => {
+
+                    if (info.postal_code === selected_value) {
+                        console.log(info.postal_code);
+                        let site_ul = info_selection.append("ul");
+                        Object.entries(info).forEach(([key, value]) => {
+                            let site_li = site_ul.append("li");
+                            site_li.text([key + ": " + value]);
+                        });
+                    }
+                });
+            }
+            info_box(data);
+            //========================================================================
+
+        }
+        //append data into list
+        append_drop(data);
+    });
+}
 
 let site_select = d3.select("#site-drop").node().value;
 
