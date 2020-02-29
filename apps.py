@@ -74,7 +74,7 @@ def index():
 def callmap():
     ## Route 01
     print('API map call routed')
-    return render_template("mapTest.html")
+    return render_template("Site-Map.html")
 
 #####################################################################################
 ####            GET DATA

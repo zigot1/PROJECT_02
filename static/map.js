@@ -24,7 +24,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // function map_drop() {
 //     //Import json file
-//     d3.json('static/JS/projects.json', function(err, data) {
+//     d3.json('projects.json', function(err, data) {
 //         if (err) console.log("Trouble loading data.");
 //         // console.log(data);
        
@@ -48,11 +48,11 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 //     });
 // }
 
-let site_select = d3.select("#site-drop").node().value;
+// let site_select = d3.select("#site-drop").node().value;
 
-function filter_site(value) {
-    // console.log(value);
-    map_drop();
-}
+// function filter_site(value) {
+//     // console.log(value);
+//     map_drop();
+// }
 
-filter_site(site_select);
+// filter_site(site_select);
