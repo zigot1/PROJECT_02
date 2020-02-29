@@ -6,9 +6,10 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- <script src="/static/js/script.js"></script> -->
-
+    <script src="{{url_for('static', filename='dynamic.js')}}"></script>
+    <!-- <script src="dynamic.js"></script> -->
     </head>
-    <body onload="MyStuff.onLoad()">
+    <body onload="MyStuff.onLoad()"  >
         <script>
             var MyStuff = {
                 "access_token": "",
@@ -30,6 +31,10 @@
                     //ProjectButton.innerText = (MyStuff.access_token) ? MyStuff.LogIn[1] : MyStuff.LogIn[0]
 
                     console.log(MyStuff.access_token)
+                },
+                //////////////////////////////////////////////////////////
+                "getMaps": function () {
+                    fetch('/callmap') 
                 },
                 //////////////////////////////////////////////////////////
                 "getUserInfo": function () {
@@ -134,8 +139,10 @@
                                 console.log('POST response: ');
 
                                 // Should be 'OK' if everything was successful
-                                //console.log(text);
-                                jsonReturn.value = text
+                                //console.log(JSON.parse(text));
+                                jsonReturn.value = text;
+                                populateLocations(JSON.parse(text))
+                                
                             });
                 },
 
@@ -246,6 +253,19 @@
         <br /><br />
         <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button> 
         <br /><br />
+        <button id="getMaps" onclick="MyStuff.getMaps()">Launch Map Pages</button> 
+        <br /><br />
+        <form id="Location_LIST">
+            <fieldset>
+                <p>
+                    <label>Select Date</label>
+                <br>
+                    <select id = "locations">
+                        <Option value="" >Locations</option>
+                    </select>
+                </p>
+            </fieldset>
+        </form>
         <textarea id="Info"></textarea>  
         <br/><br/>
         <textarea id="infoHub"></textarea> 

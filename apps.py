@@ -39,7 +39,10 @@ def populProjects():
     data_json = json.loads(usableProjects.to_json(orient='records'))
     db_cm.delete_many
     db_cm.insert_many(data_json)
+####################################################
 
+
+####################################################
 def pushJson():
     collection_name = 'clean_projects'
     db_cm = db[collection_name]
@@ -64,10 +67,17 @@ app = Flask(__name__)
 def index():
     ## Route 01
     return render_template("index.html")
-    ###, Articles=Articles , DayImage=DayImage, Weather=Weather, Data=Data, Hemi=Hemi)
+####################################################################################
+# Gall Maps
+####################################################################################
+@app.route("/callmap")
+def callmap():
+    ## Route 01
+    return render_template("Website_02/mapTest.html")
+
 #####################################################################################
 ####            GET DATA
-########################################################################################
+#####################################################################################
 ###Set route get csv data
 @app.route('/getdata', methods=['GET','POST'])
 def push2js ():
