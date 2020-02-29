@@ -111,7 +111,7 @@ html {
 */
 #info {
   position: absolute;
-  transform: translateX(200%) translateY(10em) !important;
+  transform: translateX(200%) translateY(9em);
   width: 500px;
 }
 
