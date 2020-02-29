@@ -70,10 +70,11 @@ def index():
 ####################################################################################
 # Gall Maps
 ####################################################################################
-@app.route("/callmap")
+@app.route("/callmap/")
 def callmap():
     ## Route 01
-    return render_template("Website_02/mapTest.html")
+    print('API map call routed')
+    return render_template("mapTest.html")
 
 #####################################################################################
 ####            GET DATA

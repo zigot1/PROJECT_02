@@ -34,6 +34,7 @@
                 },
                 //////////////////////////////////////////////////////////
                 "getMaps": function () {
+                    console.log('Calling Map Page');
                     fetch('/callmap') 
                 },
                 //////////////////////////////////////////////////////////
@@ -246,15 +247,6 @@
         <button id="GetUserInfo" onclick="MyStuff.getUserInfo()">Get User Info</button> 
         <button id="HubInfo" onclick="MyStuff.getHubInfo()">Get Hub Info</button>
         <button id="ProjectInfo" onclick="MyStuff.getProjectInfo()">Get Projects</button> 
-        <br /><br />
-        <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
-        <br /><br />
-        <button id="pushCSV" onclick="MyStuff.pushCSV()">Push Data to Mongo</button> 
-        <br /><br />
-        <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button> 
-        <br /><br />
-        <button id="getMaps" onclick="MyStuff.getMaps()">Launch Map Pages</button> 
-        <br /><br />
         <form id="Location_LIST">
             <fieldset>
                 <p>
@@ -266,6 +258,17 @@
                 </p>
             </fieldset>
         </form>
+        <br /><br />
+        <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
+        <br /><br />
+        <button id="pushCSV" onclick="MyStuff.pushCSV()">Push Data to Mongo</button> 
+        <br /><br />
+        <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button> 
+        <br /><br />
+        <!-- <button id="getMaps" onclick="MyStuff.getMaps()">Launch Map Pages</button>  -->
+        <button id="getMaps" onclick="window.location.href='/callmap'">Launch Map Pages</button>
+        <br /><br />
+        
         <textarea id="Info"></textarea>  
         <br/><br/>
         <textarea id="infoHub"></textarea> 
