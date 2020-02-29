@@ -61,6 +61,22 @@ a {
     transform: translateY(4em);
 }
 
+#filter-container {
+  transform: translateY(5em);
+}
+
+#filter-container {
+  width: 435px;
+  padding: 10px;
+}
+
+#filter-container #site-drop {
+  background-color: #A61414;
+  color: white;
+  font-size: 20px;
+}
+
+
 /*
 ==================================
 2.1 Map Styling 
@@ -77,7 +93,7 @@ html {
 #map {
   position: absolute;
   align-items: center !important;
-  transform: translateX(13%) translateY(5em) !important;
+  transform: translateX(13%) translateY(10em) !important;
   width: 80%;
 }
 
@@ -290,9 +306,7 @@ nav {
         top: 20px;
         left: 230px;
     }
-    .footer {
-        background-color: aqua;
-    }
+
 
 }
 
@@ -304,5 +318,5 @@ nav {
 
 #sticky-footer {
     /*Change translate when map is inserted*/
-    transform: translateY(60em);
+    transform: translateY(64em);
 }
