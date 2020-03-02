@@ -1,3 +1,22 @@
+// var L_LIST = d3.select("#locations");
+// console.log(Location)
+// L_LIST.on("change", handleChange_01 );
+
+
+// function handleChange_01 (d){
+//     console.log("A button was clicked!");
+//     console.log(document.getElementById("locations").value);
+//     fetch('/ziptomap')
+//     //var selectedStates = tableData.filter(selectState);
+//     //console.log(selectedStates);
+//     // FilteredData = selectedStates;
+//     // console.log(FilteredData);
+//     // populateState(getUniqueValues(selectedStates,"state"));
+//     // delTableRows ();
+//     // populateTable(FilteredData);
+//   }
+
+  
 function populateLocations(inArray){
     //console.log(dateArray);
     //console.log(inArray)

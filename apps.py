@@ -52,7 +52,7 @@ def pushJson():
     for project in projects:
         v = project
         del v['_id']
-        print(v)
+        #print(v)
         List.append(v)
     return (json.dumps(List))
 ####Call Scrapping Function
@@ -67,6 +67,15 @@ app = Flask(__name__)
 def index():
     ## Route 01
     return render_template("index.html")
+####################################################################################
+###     ZIP TO MAP
+####################################################################################
+# Set route
+@app.route("/ziptomap")
+def ziptomap():
+    ## Route 01
+    print('Incoming..')
+    
 ####################################################################################
 # Gall Maps
 ####################################################################################

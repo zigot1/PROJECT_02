@@ -6,8 +6,14 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- <script src="/static/js/script.js"></script> -->
-    <script src="{{url_for('static', filename='dynamic.js')}}"></script>
+    
     <!-- <script src="dynamic.js"></script> -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+                crossorigin="anonymous">
+    
     </head>
     <body onload="MyStuff.onLoad()"  >
         <script>
@@ -16,6 +22,10 @@
                 "LogIn": ["Log In", "Logged In"],
                 "onLoad": function () {
                     console.log("onLoad")
+
+                    var L_LIST = d3.select("#locations");
+                    console.log(Location)
+                    //L_LIST.on("change", handleChange_01 );
 
                     var url = new URL(window.location.href.replace('#', '?'))
 
@@ -37,6 +47,12 @@
                     console.log('Calling Map Page');
                     fetch('/callmap') 
                 },
+                //////////////////////////////////////////////////////////
+                "getzip": function (){
+                        //console.log("A button was clicked!");
+                        //console.log(document.getElementById("locations").value);
+                        fetch('/ziptomap')
+                      },
                 //////////////////////////////////////////////////////////
                 "getUserInfo": function () {
                     console.log("getUserInfo")
@@ -247,12 +263,12 @@
         <button id="GetUserInfo" onclick="MyStuff.getUserInfo()">Get User Info</button> 
         <button id="HubInfo" onclick="MyStuff.getHubInfo()">Get Hub Info</button>
         <button id="ProjectInfo" onclick="MyStuff.getProjectInfo()">Get Projects</button> 
-        <form id="Location_LIST">
+        <form id="Location_LIST"  >
             <fieldset>
                 <p>
                     <label>Select Date</label>
                 <br>
-                    <select id = "locations">
+                    <select id = "locations" onclick="MyStuff.getzip()">
                         <Option value="" >Locations</option>
                     </select>
                 </p>
@@ -281,6 +297,6 @@
         <footer>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         </footer>
-      
+        <script src="{{url_for('static', filename='dynamic.js')}}"></script>
     </body>
 </html>
