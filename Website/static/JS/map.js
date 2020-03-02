@@ -11,6 +11,7 @@ let myMap = L.map("map", {
   zoom: 13,
   maxBounds: boundaries
 });
+
 let WWWW;
 // Adding a tile layer (the background map image) to our map
 // We use the addTo method to add objects to our map
@@ -63,10 +64,7 @@ function init() {
         if (err) console.log("Trouble loading data.");
 
             let selection = d3.select("#site-drop");
-            
-            //clears exist values in dropdown list
-            // selection.html("");
-            
+
             data.forEach((n) => { 
                 selection.append("option")
                          .text(n.postal_code)
@@ -74,7 +72,39 @@ function init() {
             });
     });
 }
+//========================================================================
+//Transitioning chart
 
+function scatter_plot() {
+
+let height_svg = 500;
+let width_svg = 800;
+
+//Set default margins
+let margin = {
+    top: 10,
+    right: 50,
+    left: 50,
+    bottom: 100
+};
+
+let width = width_svg - margin.left - margin.right;
+let height = height_svg - margin.top - margin.bottom;
+
+let injure_svg = d3.select("#scatter-injury")
+                   .append("svg")
+                   .attr("width", width_svg)
+                   .attr("height", height_svg);
+
+//=====================================
+let scatter_chart = injure_svg.append("g")
+                              .attr("transform", `translate${margin.left}, ${margin.right}`);
+
+let site_value = "value";
+
+}
+
+//========================================================================
 
 let site_select = d3.select("#site-drop").node().value;
 
