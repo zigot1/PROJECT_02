@@ -1,20 +1,27 @@
-// var L_LIST = d3.select("#locations");
-// console.log(Location)
-// L_LIST.on("change", handleChange_01 );
+var L_LIST = d3.select("#locations");
+//console.log(Location)
+L_LIST.on("change", handleChange_01 );
 
 
-// function handleChange_01 (d){
-//     console.log("A button was clicked!");
-//     console.log(document.getElementById("locations").value);
-//     fetch('/ziptomap')
-//     //var selectedStates = tableData.filter(selectState);
-//     //console.log(selectedStates);
-//     // FilteredData = selectedStates;
-//     // console.log(FilteredData);
-//     // populateState(getUniqueValues(selectedStates,"state"));
-//     // delTableRows ();
-//     // populateTable(FilteredData);
-//   }
+function handleChange_01 (d){
+    console.log("A button was clicked!");
+    console.log(document.getElementById("locations").value);
+    var V_List = document.getElementById("locations").value;
+    console.log(V_List)
+    $.ajax(
+        { 
+            url: "/ziptomap",
+            data: V_List,
+            type: 'POST',
+            body: JSON.stringify({"greeting": "Hello from the browser!"})
+
+        }).then(function (response) {
+            // console.log('POST response: ', response);
+            document.getElementById('jsonProject').value = response;
+            return response;
+        }).then (yyy);
+    
+  }
 
   
 function populateLocations(inArray){
@@ -54,5 +61,55 @@ function getUniqueValues (inArray, inValue){
       
     }
 
+    function each_feature(feature,layer) {
+        // console.log(feature);
+        // console.log(layer.feature.properties);
+        L.bindPopup("<h3>Place: " + feature.properties.place + "</h3><hr><p>Magnitude: " +
+        feature.properties.mag + "</p><hr><p>Time: " + new Date(feature.properties.time) + "</p>");
+        // console.log(feature.properties.mag);
+    }
+
+
+    // Creates layer with the appended earthquake data
+    let earth_geo = L.geoJSON(e_data, {
+        pointToLayer: function(feature,latlng) {
+            return L.circle(latlng,{
+                    fillOpacity: 0.60,
+                    color: "white",
+                    fillColor: color_size(feature.properties.mag),
+                    radius: magnitude_size(feature.properties.mag)
+                });
+        },
+        onEachFeature: each_feature
+    });  
+function yyy() {
+        var B_call = document.getElementById('jsonProject').value;
+
+        console.log ('This is the location  ',JSON.parse(B_call));   
+        var JsonLoc = JSON.parse(B_call); 
+        var location = JsonLoc[0];
+        console.log(location.latitude, location.longitude );
+        L.marker([location.latitude, location.longitude]).addTo(myMap);
+        
+        // d3.json(JsonLoc, function(response) {
+        //     var location = response[0];
+        //     console.log(location.latitude);
+        //     L.marker([location.latitude, location.longitude]).addTo(myMap);
+        //     // for (var i = 0; i < response[0].length; i++) {
+              
+        //     //   WWWW= response;
+        //     //   var location = response[0];
+        //     //   console.log(location);
+        //     //   if (location) {
+        //     //     console.log(location.latitude);
+        //     //     //console.log(location.coord[0]);
+        //     //     L.marker([location.latitude, location.longitude]).addTo(myMap);
+        //     //             }
+        //     //  }
+        // })
+    }
+//   );
+  
+// }
 //populateDate(getUniqueValues(tableData,"postal_code"));
 //populateLocations(inArray)

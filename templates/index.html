@@ -1,18 +1,36 @@
 <html>
     <head>
-        <title>3-legged implicit grant test</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <title>API Connection Page</title>
+    <!--JavaScript sourcing-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+            crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='Landing.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- <script src="/static/js/script.js"></script> -->
-    
-    <!-- <script src="dynamic.js"></script> -->
+    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
-                crossorigin="anonymous">
+<!--Link stylesheet and font apis-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Site-Map.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+
+   
+    
+    
+    
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+       
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script> --> -->
+    
+   
+    
     
     </head>
     <body onload="MyStuff.onLoad()"  >
@@ -109,17 +127,17 @@
                     .then(data => {
                         let json = JSON.parse(data)
                         let pretty = JSON.stringify(json, null, 2)
-                        // MyStuff.showProjectInfo(pretty)
-                        //console.log(data)
+                        MyStuff.showProjectInfo(pretty)
+                        console.log(data)
                     })
-                    fetch ('/token', {
-                        method: 'POST',
-                        //body: pretty
-                    })
-                    .then (function (response){ return response.text();})
-                    .then(function(text){console.log('POST response: ');
-                    console.log(text);
-                    })
+                    // fetch ('/token', {
+                    //     method: 'POST',
+                    //     //body: pretty
+                    // })
+                    // .then (function (response){ return response.text();})
+                    // .then(function(text){console.log('POST response: ');
+                    // console.log(text);
+                    // })
                 },
                 //////////////////////////////////////////////////////////////
                 ///         PUSH DATA TO MONGO
@@ -139,11 +157,9 @@
                 //////////////////////////////////////////////////////////////
                 "getData": function() {
                     // POST
-                                fetch('/getdata', {
-
-                                // Specify the method
-                                method: 'POST',
-
+                      fetch('/getdata', {
+                      // Specify the method
+                             method: 'POST',
                             // A JSON payload
                             body: JSON.stringify({
                                 "greeting": "Hello from the browser!"
@@ -196,44 +212,28 @@
                         `?response_type=token&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}`, "_self")
                 },
                 ////////////////////////////////////////////////////////////////
-                "logIn2": function () {
-                    console.log("logIn2")
-                    var myHeaders = new Headers();
-                        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-                        myHeaders.append("Authorization", "Bearer ",MyStuff.access_token );
+                // "logIn2": function () {
+                //     console.log("logIn2")
+                //     var myHeaders = new Headers();
+                //         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+                //         myHeaders.append("Authorization", "Bearer ",MyStuff.access_token );
                     
-                        var urlencoded = new URLSearchParams();
-                            urlencoded.append("client_id", "CA9W5KNEWI5YW6MAyYIXVSHBaSs3iA4L");
-                            urlencoded.append("client_secret", "AnmVcWf29x82odX5");
-                            urlencoded.append("grant_type", "client_credentials");
-                            urlencoded.append("scope", "account:write account:read data:write data:create data:read bucket:read bucket:create");
-                            var requestOptions = {
-                                method: 'POST',
-                                headers: myHeaders,
-                                body: urlencoded,
-                                redirect: 'follow'
-                                };
-                                fetch("https://developer.api.autodesk.com/authentication/v1/authenticate", requestOptions)
-                                        .then(response => response.text())
-                                        .then(result => console.log(result))
-                                        .catch(error => console.log('error', error));
-                    // let clientId = "ysAEIbQHJGEX0LbuPUI2d2ACu1adNPFi" 
-                    // let clientSecret = "De8369d15a6a14d1"
-                    // let grantType = "client_credentials"
-                    // let scopes = "data:read+data:write+data:create+data:search+bucket:read+bucket:update+account:read+account:write"
-                    // let redirectUri = encodeURI("http://localhost:8000")
-                    // //let redirectUri = encodeURI("https://www.getpostman.com/oauth2/callback")
-                    // console.log(redirectUri);
-                    // window.open(`https://developer.api.autodesk.com/authentication/v1/authenticate` +
-                    //     `?response_type=token&client_id=${clientId}&`+
-                    //     // `redirect_uri=${redirectUri}&`+
-                    //     `client_secret=${clientSecret}&`+
-                    //     `grant_type=${grantType}`+
-                    //     `scope=${scopes}&`, "_self")
-                },
-
-
-
+                //         var urlencoded = new URLSearchParams();
+                //             urlencoded.append("client_id", "CA9W5KNEWI5YW6MAyYIXVSHBaSs3iA4L");
+                //             urlencoded.append("client_secret", "AnmVcWf29x82odX5");
+                //             urlencoded.append("grant_type", "client_credentials");
+                //             urlencoded.append("scope", "account:write account:read data:write data:create data:read bucket:read bucket:create");
+                //             var requestOptions = {
+                //                 method: 'POST',
+                //                 headers: myHeaders,
+                //                 body: urlencoded,
+                //                 redirect: 'follow'
+                //                 };
+                //                 fetch("https://developer.api.autodesk.com/authentication/v1/authenticate", requestOptions)
+                //                         .then(response => response.text())
+                //                         .then(result => console.log(result))
+                //                         .catch(error => console.log('error', error));
+                    
                 ////////////////////////////////////////////////////////////////
                 "showInfo": function (text) {
                     let logInButton = document.getElementById("Info")
@@ -258,45 +258,53 @@
             }
         </script>
         <button id="LogIn" onclick="MyStuff.logIn()">Log In</button>
-        <button id="LogIn2" onclick="MyStuff.logIn2()">Log In 2</button>
-        <br /><br />
+        <!-- <button id="LogIn2" onclick="MyStuff.logIn2()">Log In 2</button>
+        <br /><br /> -->
+        <br/>
         <button id="GetUserInfo" onclick="MyStuff.getUserInfo()">Get User Info</button> 
         <button id="HubInfo" onclick="MyStuff.getHubInfo()">Get Hub Info</button>
         <button id="ProjectInfo" onclick="MyStuff.getProjectInfo()">Get Projects</button> 
+        <br/>
+        <textarea id="Info"></textarea> 
+        <textarea id="infoHub"></textarea>
+        <textarea id="infoProject"></textarea> 
+        <br /> 
+        <button id="pushCSV" onclick="MyStuff.pushCSV()">Push Data to Mongo</button> 
+        <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button> 
+        <button id="getMaps" onclick="window.location.href='/callmap'">Launch Map Pages</button>
+        <br />
         <form id="Location_LIST"  >
             <fieldset>
                 <p>
-                    <label>Select Date</label>
+                    <label>Select Location</label>
                 <br>
-                    <select id = "locations" onclick="MyStuff.getzip()">
+                    <select id = "locations" >
                         <Option value="" >Locations</option>
                     </select>
                 </p>
             </fieldset>
         </form>
         <br /><br />
-        <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
-        <br /><br />
-        <button id="pushCSV" onclick="MyStuff.pushCSV()">Push Data to Mongo</button> 
-        <br /><br />
-        <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button> 
-        <br /><br />
+        <textarea id="jsonReturn"></textarea>
+        <br/>
+        <h3>Json Return</h3>
+        <textarea id="jsonProject"></textarea>  
+        <!-- <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
+        <br /><br /> -->
+        <div class="rounded shadow-lg bg-dark" id="map"></div>
         <!-- <button id="getMaps" onclick="MyStuff.getMaps()">Launch Map Pages</button>  -->
-        <button id="getMaps" onclick="window.location.href='/callmap'">Launch Map Pages</button>
-        <br /><br />
         
-        <textarea id="Info"></textarea>  
+        
         <br/><br/>
-        <textarea id="infoHub"></textarea> 
-        <br/><br/>
-        <textarea id="infoProject"></textarea>  
-        <br/><br/>
-        <textarea id="Project"></textarea>  
-        <br/><br/>
-        <textarea id="jsonReturn"></textarea>   
+           
         <footer>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            
         </footer>
+        <!-- D3 JavaScript -->
+        <script src="{{url_for('static', filename='Landing.js')}}"></script>
+        <script src="{{url_for('static', filename='config.js')}}"></script>
+        <!-- <script src="{{url_for('static', filename='map.js')}}"></script> -->
+        <script src="{{url_for('static', filename='maplogic.js')}}"></script>
         <script src="{{url_for('static', filename='dynamic.js')}}"></script>
     </body>
 </html>
