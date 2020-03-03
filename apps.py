@@ -25,6 +25,29 @@ else:
 ############################################################################
 ##### get lat and longitude pair from Projects Collection
 ############################################################################
+def getAll (inZip):
+    print ('ZIP code search_', inZip)
+    mycol = db['clean_projects']
+    myquery = {'postal_code': inZip}
+    myLocations = mycol.find()
+    List = []
+    # for x in myLocation:
+    #     print(x)
+    for entry in myLocations:
+        v = entry
+        del v['_id']
+        #print(v)
+        List.append(v)
+    #return (json.dumps(List))
+    projectsCollection = json.dumps(List, indent = 4)
+
+    with open("static/new_projects.json", "w") as outfile:
+        outfile.write(projectsCollection) 
+
+    #callmap2(json.dumps(List))
+############################################################################
+##### get lat and longitude pair from Projects Collection
+############################################################################
 def getLatLon (inZip):
     print ('ZIP code search_', inZip)
     mycol = db['clean_projects']
@@ -99,7 +122,8 @@ def ziptomap():
         location = {}
         message = {'greeting':'POST worked  !'}
         data = request.get_data().decode("utf-8")
-        data1 = getLatLon(data)
+        # data1 = getLatLon(data)
+        data1 = getAll(data)
         return data1
     else:
         message = {'greeting':'Bummer  !'}
