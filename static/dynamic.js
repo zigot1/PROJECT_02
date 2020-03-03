@@ -91,7 +91,13 @@ function yyy() {
         var JsonLoc = JSON.parse(B_call); 
         var location = JsonLoc[0];
         console.log(location.latitude, location.longitude );
-        L.marker([location.latitude, location.longitude]).addTo(myMap);
+        L.marker([location.latitude, location.longitude]).bindPopup("<h6>Project Name: " + 
+        location.name + "<hr>" +
+        location.value + "<br/>" +
+        location.city + "<br/>" +
+        location.county +", " + location.state  +       
+        "</h6>")
+        .addTo(myMap);
         
         
     }
