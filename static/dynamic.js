@@ -16,8 +16,9 @@ function handleChange_01 (d){
             body: JSON.stringify({"greeting": "Hello from the browser!"})
 
         }).then(function (response) {
-            // console.log('POST response: ', response);
+            console.log('POST response: ', response);
             document.getElementById('jsonProject').value = response;
+
             return response;
         }).then (yyy);
     
@@ -82,6 +83,7 @@ function getUniqueValues (inArray, inValue){
         },
         onEachFeature: each_feature
     });  
+    /////////////////////////////
 function yyy() {
         var B_call = document.getElementById('jsonProject').value;
 
@@ -91,22 +93,7 @@ function yyy() {
         console.log(location.latitude, location.longitude );
         L.marker([location.latitude, location.longitude]).addTo(myMap);
         
-        // d3.json(JsonLoc, function(response) {
-        //     var location = response[0];
-        //     console.log(location.latitude);
-        //     L.marker([location.latitude, location.longitude]).addTo(myMap);
-        //     // for (var i = 0; i < response[0].length; i++) {
-              
-        //     //   WWWW= response;
-        //     //   var location = response[0];
-        //     //   console.log(location);
-        //     //   if (location) {
-        //     //     console.log(location.latitude);
-        //     //     //console.log(location.coord[0]);
-        //     //     L.marker([location.latitude, location.longitude]).addTo(myMap);
-        //     //             }
-        //     //  }
-        // })
+        
     }
 //   );
   
