@@ -38,12 +38,12 @@ def getAll (inZip):
         del v['_id']
         #print(v)
         List.append(v)
-    #return (json.dumps(List))
+    
     projectsCollection = json.dumps(List, indent = 4)
 
     with open("static/new_projects.json", "w") as outfile:
         outfile.write(projectsCollection) 
-
+    return (json.dumps(List))
     #callmap2(json.dumps(List))
 ############################################################################
 ##### get lat and longitude pair from Projects Collection
