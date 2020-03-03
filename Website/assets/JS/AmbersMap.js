@@ -2,7 +2,7 @@
 // We set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
 var myMap = L.map("map", {
-  center: [61820],
+  center: [45.52, -122.67],
   zoom: 13
 });
 
@@ -11,9 +11,12 @@ var myMap = L.map("map", {
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
-  id: "mapbox.postal_code",
+  id: "mapbox.streets",
   accessToken: API_KEY
 }).addTo(myMap);
+
+
+
 
 
 

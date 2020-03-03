@@ -61,6 +61,19 @@ a {
     transform: translateY(4em);
 }
 
+#Location_LIST p label{
+  font-size: 25px;
+  font-weight: lighter;
+  color: #A61414;
+}
+
+#Location_LIST #locations {
+  background-color: #A61414;
+  font-size: 20px;
+  font-weight: lighter;
+  color: white;
+}
+
 /*
 ==================================
 2.1 Map Styling 
@@ -71,7 +84,7 @@ a {
 body,
 html {
   z-index: 1;
-  height: 97.4%;
+  height: 90%;
 }
 
 #map {
@@ -154,7 +167,7 @@ nav {
 ==================================
 */
 
-.container {
+.container, #map {
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 8s;
     -moz-animation: fadeIn ease 8s;
@@ -304,5 +317,10 @@ nav {
 
 #sticky-footer {
     /*Change translate when map is inserted*/
-    transform: translateY(60em);
+    height: 70px;
+    transform: translateY(70em);
+}
+
+#sticky-footer #foot small {
+  color: white !important;
 }

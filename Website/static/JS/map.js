@@ -1,6 +1,9 @@
 
 //Mapbox characteristics
 
+
+
+
 let boundaries = [
     [85.051129, -200], // East coordinates
     [-85.051129,190] // Northeast coordinates
@@ -21,6 +24,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   id: "mapbox.dark",
   accessToken: API_KEY
 }).addTo(myMap);
+
 
 
 function map_drop() {
@@ -56,8 +60,12 @@ function map_drop() {
         info_box(data);
             //========================================================================
     });
-}
+    }
 
+
+
+
+ //========================================================================
 function init() {
     
     d3.json('static/JS/projects.json', function(err, data) {
@@ -71,6 +79,8 @@ function init() {
                          .property("value", n.postal_code);
             });
     });
+
+
 }
 //========================================================================
 //Transitioning chart
@@ -101,6 +111,7 @@ let scatter_chart = injure_svg.append("g")
                               .attr("transform", `translate${margin.left}, ${margin.right}`);
 
 let site_value = "value";
+let blah;
 
 }
 

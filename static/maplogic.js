@@ -27,23 +27,23 @@ let WWWW;
   
   ///var B_call = "https://gbfs.citibikenyc.com/gbfs/en/station_information.json";
   
-  var B_call = document.getElementById('jsonProject').value
-  console.log ('This is the location',B_call)         
-  d3.json(B_call, function(response) {
+  // var B_call = document.getElementById('jsonProject').value
+  // console.log ('This is the location',B_call)         
+  // d3.json(B_call, function(response) {
   
-            //console.log(response);
-            //console.log(response.count);
-            console.log(response.data.stations.length);
-            for (var i = 0; i < response.data.stations.length; i++) {
-              //console.log("This is my response ", response.list[i], " ...", i);
-              WWWW= response;
-              var location = response.data.stations[i];
-              console.log(location);
-              if (location) {
-                console.log(location.lat);
-                //console.log(location.coord[0]);
-                L.marker([location.lat, location.lon]).addTo(myMap);
-              }
-            }
-  });
+  //           //console.log(response);
+  //           //console.log(response.count);
+  //           console.log(response.data.stations.length);
+  //           for (var i = 0; i < response.data.stations.length; i++) {
+  //             //console.log("This is my response ", response.list[i], " ...", i);
+  //             WWWW= response;
+  //             var location = response.data.stations[i];
+  //             console.log(location);
+  //             if (location) {
+  //               console.log(location.lat);
+  //               //console.log(location.coord[0]);
+  //               L.marker([location.lat, location.lon]).addTo(myMap);
+  //             }
+  //           }
+  // });
   
