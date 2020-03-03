@@ -111,7 +111,7 @@ html {
 */
 #info {
   position: absolute;
-  transform: translateX(200%) translateY(9em);
+  transform: translateX(200%) translateY(8em);
   width: 500px;
 }
 
@@ -342,5 +342,5 @@ nav {
 
 #sticky-footer {
     /*Change translate when map is inserted*/
-    transform: translateY(100em);
+    transform: translateY(110em);
 }
