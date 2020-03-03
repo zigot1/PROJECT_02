@@ -102,12 +102,25 @@ CREATE TABLE "issues_issue_subtypes" (
      )
 );
 
+CREATE TABLE "zips" (
+    "zip" varchar(60)   NOT NULL,
+    "latitude" double precision   NOT NULL,
+    "longitude" double precision   NOT NULL,
+    "city" varchar(60),
+    "state" varchar(60),
+    "county" varchar(60),
+    "other_info" varchar(60),
+    CONSTRAINT "pk_zips" PRIMARY KEY (
+        "zip"
+     )
+);
 
 
 
 
+-- important note: these foreign keys are a good idea but had some issues with FOREIGN KEY CONSTRAINT violations when loading data... missing keys in some tables. so it may be best to run schema without the constraints listed below 
 
--- important note: these foreign keys are a good idea but had some issues with FOREIGN KEY CONSTRAINT violations when loading data... missing keys in some tables. so it may be best to run schema without the constraints listed below
+-- also zip foreign key needed still if adding this
 
 
 

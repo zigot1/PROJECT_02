@@ -2,13 +2,13 @@
 //Mapbox characteristics
 
 let boundaries = [
-    [85.051129, -200], // East coordinates
-    [-85.051129,190] // Northeast coordinates
+    [47, -121], // East coordinates
+    [26.05, -78] // Northeast coordinates
     ];
 
 let myMap = L.map("map", {
-  center: [40.73,-74.0059],
-  zoom: 13,
+  center: [40.1018,-88.1972],
+  zoom: 5,
   maxBounds: boundaries
 });
 let WWWW;
