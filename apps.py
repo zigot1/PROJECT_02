@@ -86,6 +86,28 @@ def populProjects():
     data_json = json.loads(combined_df.to_json(orient='records'))
     db_cm.delete_many
     db_cm.insert_many(data_json)
+#############################################################################
+##### Populate MOngo with Issues
+##############################################################################
+def populIssues():
+    print('Mongo polulating.....')
+    issuesfile = "data/issues_issues.csv"
+    data = pd.read_csv('data/csv/admin_projects.csv') ## Create Project Data Frame
+    issues_DF = pd.read_csv(issuesfile, encoding='ISO-8859-1',dtype = {'zip':'str'}) ## Create ZIP dataframe
+    ### Clean project data
+    cleanData = pd.DataFrame(data[['id','bim360_account_id','status','name','start_date','type','value','postal_code']])
+    activeProjects = cleanData[(cleanData['status'] == 'active' )& (cleanData['value'] > 5000000)]
+    usableProjects = activeProjects.dropna(how='any')
+    
+    temp_df = usableProjects.merge(ZIP_DF, left_on='postal_code', right_on='zip')
+    combined_df = pd.DataFrame(temp_df[['bim360_account_id','id','name','postal_code','start_date','status','type','value','latitude','longitude','city','state','county','other_info']])
+    print(combined_df.count())
+    db = client[dbName]
+    collection_name = 'clean_projects'
+    db_cm = db[collection_name]
+    data_json = json.loads(combined_df.to_json(orient='records'))
+    db_cm.delete_many
+    db_cm.insert_many(data_json)
 ####################################################
 ####################################################
 def pushJson():
@@ -123,7 +145,7 @@ def ziptomap():
         message = {'greeting':'POST worked  !'}
         data = request.get_data().decode("utf-8")
         # data1 = getLatLon(data)
-        data1 = getAll(data)
+        data1 = getLatLon(data)
         return data1
     else:
         message = {'greeting':'Bummer  !'}
