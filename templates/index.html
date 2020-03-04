@@ -176,7 +176,7 @@
                                 // Should be 'OK' if everything was successful
                                 //console.log(JSON.parse(text));
                                 jsonReturn.value = text;
-                                populateLocations(JSON.parse(text))
+                                //populateLocations(JSON.parse(text))
                                 
                             });
                 },
@@ -255,7 +255,9 @@
         </header>
         <div class="container">
             <div id="site-text">
-                <h1>Construction Site Locations</h1>
+                <h1>Construction Site locations<hr>
+                <button id="locations">Show Locations</button>
+            </h1>
             </div>
         </div>  
         <!-- <button id="LogIn" onclick="MyStuff.logIn()">Log In</button> -->
@@ -274,17 +276,18 @@
         <!-- <button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button>  -->
         <!-- <button id="getMaps" onclick="window.location.href='/callmap'">Launch Map Pages</button> -->
         <br />
-        <form id="Location_LIST"  >
+        
+        <!-- <form id="Location_LIST"  >
             <fieldset>
                 <p>
-                    <label>Select Location</label>
+                    <label>Show Location</label>
                 <br>
                     <select id = "locations" >
                         <Option value="" >Locations</option>
                     </select>
                 </p>
             </fieldset>
-        </form>
+        </form> -->
         <br /><br />
         <textarea style="display: none;" id="jsonReturn"></textarea>
         <br/> 

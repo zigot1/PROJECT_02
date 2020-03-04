@@ -1,6 +1,6 @@
 var L_LIST = d3.select("#locations");
 //console.log(Location)
-L_LIST.on("change", handleChange_01 );
+L_LIST.on("click", handleChange_01 );
 var ProjectList;
 
 function handleChange_01 (d){
