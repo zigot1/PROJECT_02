@@ -340,6 +340,10 @@ nav {
     .container h2 {
         font-size: 15px;
     }
+
+    #Location_LIST {
+      transform: translateX(25%);
+    }
     
 
     .menu .line {
@@ -356,9 +360,11 @@ nav {
         top: 20px;
         left: 230px;
     }
-    .footer {
-        background-color: aqua;
-    }
+    #sticky-footer {
+      /*Change translate when map is inserted*/
+      height: 70px;
+      transform: translateY(500em) !important;
+  }
 
 }
 
