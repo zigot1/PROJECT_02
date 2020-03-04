@@ -90,22 +90,15 @@ def populProjects():
 ##### Populate MOngo with Issues
 ##############################################################################
 def populIssues():
-    print('Mongo polulating.....')
-    issuesfile = "data/issues_issues.csv"
-    data = pd.read_csv('data/csv/admin_projects.csv') ## Create Project Data Frame
-    issues_DF = pd.read_csv(issuesfile, encoding='ISO-8859-1',dtype = {'zip':'str'}) ## Create ZIP dataframe
+    print('Mongo polulating Issues')
+    masterTable_file = "data/csv/master_table.csv"
+    masterData = pd.read_csv(masterTable_file, encoding='ISO-8859-1')
     ### Clean project data
-    cleanData = pd.DataFrame(data[['id','bim360_account_id','status','name','start_date','type','value','postal_code']])
-    activeProjects = cleanData[(cleanData['status'] == 'active' )& (cleanData['value'] > 5000000)]
-    usableProjects = activeProjects.dropna(how='any')
-    
-    temp_df = usableProjects.merge(ZIP_DF, left_on='postal_code', right_on='zip')
-    combined_df = pd.DataFrame(temp_df[['bim360_account_id','id','name','postal_code','start_date','status','type','value','latitude','longitude','city','state','county','other_info']])
-    print(combined_df.count())
+    cleanMaster = pd.DataFrame(masterData[['name','bim360_project_id','issue_type_issue_type','issue_status','issue_type_is_active','value','type']])
     db = client[dbName]
-    collection_name = 'clean_projects'
+    collection_name = 'clean_issues'
     db_cm = db[collection_name]
-    data_json = json.loads(combined_df.to_json(orient='records'))
+    data_json = json.loads(cleanMaster.to_json(orient='records'))
     db_cm.delete_many
     db_cm.insert_many(data_json)
 ####################################################
@@ -121,6 +114,26 @@ def pushJson():
         del v['_id']
         #print(v)
         List.append(v)
+    return (json.dumps(List))
+#########################################################
+#########################################################
+####################################################
+def IssuesJson():
+    collection_name = 'clean_issues'
+    db_cm = db[collection_name]
+    projects = db_cm.find()
+    List = []
+
+    for project in projects:
+        v = project
+        del v['_id']
+        print(v)
+        List.append(v)
+    issuesCollection = json.dumps(List, indent = 4)
+    with open("static/issues_data.json", "w") as outfile:
+        outfile.write(issuesCollection) 
+    return (json.dumps(List))
+
     return (json.dumps(List))
 #########################################################
 #########################################################
@@ -141,7 +154,6 @@ def index():
 def ziptomap():
     if request.method == 'POST':
         print('ZIP Incoming..')
-        location = {}
         message = {'greeting':'POST worked  !'}
         data = request.get_data().decode("utf-8")
         ###data1 = getLatLon(data)
@@ -172,7 +184,7 @@ def callmap2(inLocation):
 #####################################################################################
 ####            GET DATA
 #####################################################################################
-###Set route get csv data
+
 @app.route('/getdata', methods=['GET','POST'])
 def push2js ():
     # POST request
@@ -182,6 +194,19 @@ def push2js ():
     else:
         print('Outgoing..')
         return jsonify(eval(pushJson()))  # serialize and use JSON headers
+#####################################################################################
+####            GET Issues DATA
+#####################################################################################
+
+@app.route('/getIssuesData', methods=['GET','POST'])
+def issues2js ():
+    # POST request
+    if request.method == 'POST':
+        print('Incoming..')
+        return jsonify(eval(IssuesJson()))
+    else:
+        print('Outgoing..')
+        return jsonify(eval(IssuesJson()))  # serialize and use JSON headers
 #####################################################################################
 ####            GET Project
 #####################################################################################
