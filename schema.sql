@@ -173,7 +173,7 @@ CREATE TABLE "issues_with_projects" (
 );
 
 CREATE TABLE "master_table" (
-    "issue_type_ssue_type_id" varchar(60)    NOT NULL,    
+    "issue_type_issue_type_id" varchar(60)    NOT NULL,    
     "issue_type_issue_type" varchar(60)    ,
     "issue_type_is_active" varchar(30)    ,
     "issue_type_created_by" varchar(60)    ,

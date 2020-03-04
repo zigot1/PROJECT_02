@@ -17,11 +17,11 @@ function handleChange_01 (d){
 
         }).then(function (response) {
             console.log('POST response: ', response);
-            document.getElementById('jsonProject').value = response;
-
+            //document.getElementById('jsonProject').value = response;
+            yyy(response)();
             return response;
-        }).then (yyy);
-    
+        });
+        // .then (yyy(response))
   }
 
   
@@ -62,10 +62,14 @@ function getUniqueValues (inArray, inValue){
       
     }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> dd579ab7a7deae72e65952855c927eaee45f1819
     /////////////////////////////
-function yyy() {
-        var B_call = document.getElementById('jsonProject').value;
-
+function yyy(inValue) {
+        //var B_call = document.getElementById('jsonProject').value;
+        var B_call = inValue;
         console.log ('This is the location  ',JSON.parse(B_call));   
         var JsonLoc = JSON.parse(B_call); 
         var location = JsonLoc[0];

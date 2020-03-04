@@ -212,28 +212,7 @@
                     window.open(`https://developer.api.autodesk.com/authentication/v1/authorize` +
                         `?response_type=token&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}`, "_self")
                 },
-                ////////////////////////////////////////////////////////////////
-                // "logIn2": function () {
-                //     console.log("logIn2")
-                //     var myHeaders = new Headers();
-                //         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-                //         myHeaders.append("Authorization", "Bearer ",MyStuff.access_token );
-                    
-                //         var urlencoded = new URLSearchParams();
-                //             urlencoded.append("client_id", "CA9W5KNEWI5YW6MAyYIXVSHBaSs3iA4L");
-                //             urlencoded.append("client_secret", "AnmVcWf29x82odX5");
-                //             urlencoded.append("grant_type", "client_credentials");
-                //             urlencoded.append("scope", "account:write account:read data:write data:create data:read bucket:read bucket:create");
-                //             var requestOptions = {
-                //                 method: 'POST',
-                //                 headers: myHeaders,
-                //                 body: urlencoded,
-                //                 redirect: 'follow'
-                //                 };
-                //                 fetch("https://developer.api.autodesk.com/authentication/v1/authenticate", requestOptions)
-                //                         .then(response => response.text())
-                //                         .then(result => console.log(result))
-                //                         .catch(error => console.log('error', error));
+                
                     
                 ////////////////////////////////////////////////////////////////
                 "showInfo": function (text) {
@@ -267,7 +246,7 @@
                 </div>
                 <ul>
                     <li><a id="LogIn" onclick="MyStuff.logIn()">Log In</a></li>
-                    <li><a id="getData" onclick="MyStuff.getData()">Get Data from Mongo</a></li>
+                    <li><button id="getData" onclick="MyStuff.getData()">Get Data from Mongo</button></li>
                     <!-- <li><a href="Graph_Data.html" target="_blank">Graph Data</a></li>
                     <li><a href="Site-Map.html">Site Maps</a></li> -->
                 </ul>
@@ -305,9 +284,9 @@
                 </p>
             </fieldset>
         </form>
-        <!-- <br /><br />
+        <br /><br />
         <textarea id="jsonReturn"></textarea>
-        <br/> -->
+        <br/> 
         <!-- <!-- <h3>Json Return</h3> -->
         <!-- <textarea id="jsonProject"></textarea>   -->
         <!-- <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
