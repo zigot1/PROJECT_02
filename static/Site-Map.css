@@ -146,13 +146,20 @@ nav ul button:hover:before {
 body,
 html {
   z-index: 1;
-  height: 90%;
+  height: 70%;
 }
 
 #map {
   position: absolute;
-  transform: translateX(13%) translateY(5em) !important;
-  width: 80%;
+  transform: translateX(15%) translateY(5em) !important;
+  width: 50%;
+}
+
+#chart {
+  height: 500px;
+  width: 500px;
+  background-color: #A61414 !important;
+  transform: translateX(75em) translateY(62px);
 }
 
 /*
