@@ -107,6 +107,26 @@ function yyy(inValue) {
         
         
     }
+
+    function info_box(data) {
+        console.log(data);
+
+        let info_selection = d3.select("#list-info");
+
+        info_selection.html("");
+
+        Object.entries(data).forEach(([key, info]) => {
+
+            if (info.postal_code === selected_value) {
+                console.log(info.postal_code);
+                let site_ul = info_selection.append("ul");
+                Object.entries(info).forEach(([key, value]) => {
+                    let site_li = site_ul.append("li");
+                    site_li.text([key.toUpperCase() + ": " + value]);
+                    });
+                }
+            });
+    }
 //   );  
 // }
 //populateDate(getUniqueValues(tableData,"postal_code"));
