@@ -61,32 +61,40 @@ a {
     transform: translateY(4em);
 }
 
-#Location_LIST {
-  font-size: 25px;
+.container #locations {
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  border: 2px solid #A61414;
   color: #A61414;
-  transform: translateX(31em);
-  width: 200px;
-  margin-bottom: -40px;
+  background: none;
+  margin-top: 0px !important;
+  font-size: 25px !important;
+  padding: 5px 40px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 1.5s;
+  transform: translateX(215%) translateY(4em);
 }
 
-
-#Location_LIST p label {
-  font-size: 25px;
-  font-weight: lighter !important;
-}
-
-#Location_LIST #locations {
-  background-color: #A61414;
-  font-size: 20px;
-  font-weight: lighter;
+.container #locations:hover {
   color: white;
-  transform: translateX(17px);
-  transform-origin: top center !important;
-  transition: 0.6s;
 }
 
-#Location_LIST #locations:hover {
-  font-size: 25px; 
+.container #locations::before {
+  top: 0;
+  border-radius: 0 0 40% 40%;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #A61414;
+  z-index: -1;
+  transition: 0.9s;
+}
+
+.container #locations:hover:before {
+  height: 170%;
 }
 
 /* 
