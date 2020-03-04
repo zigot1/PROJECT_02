@@ -70,7 +70,6 @@ function getUniqueValues (inArray, inValue){
       
     }
 
-    
     /////////////////////////////
 function yyy(inValue) {
         //var B_call = document.getElementById('jsonProject').value;

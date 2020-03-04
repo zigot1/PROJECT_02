@@ -5,6 +5,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
             crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='Shop.png')}}"/>
     <script src="{{url_for('static', filename='Landing.js')}}"></script>
     <script src="{{url_for('static', filename='app.css')}}"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -69,7 +70,7 @@
                 //////////////////////////////////////////////////////////
                 "getzip": function (){
                         //console.log("A button was clicked!");
-                        //console.log(document.getElementById("locations").value);
+                        // console.log(document.getElementById("locations").value);
                         fetch('/ziptomap')
                       },
                 //////////////////////////////////////////////////////////
@@ -285,10 +286,10 @@
             </fieldset>
         </form>
         <br /><br />
-        <textarea id="jsonReturn"></textarea>
-        <br/>
-        <!-- <h3>Json Return</h3>
-        <textarea id="jsonProject"></textarea>   -->
+        <textarea style="display: none;" id="jsonReturn"></textarea>
+        <br/> 
+        <!-- <!-- <h3>Json Return</h3> -->
+        <textarea style="display: none;" id="jsonProject"></textarea>  
         <!-- <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
         <br /><br /> -->
         <div class="rounded shadow-lg bg-dark" id="map"></div>
