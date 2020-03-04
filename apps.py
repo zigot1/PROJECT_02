@@ -132,9 +132,9 @@ def IssuesJson():
     issuesCollection = json.dumps(List, indent = 4)
     with open("static/issues_data.json", "w") as outfile:
         outfile.write(issuesCollection) 
-    return (json.dumps(List))
+    ##return (json.dumps(List))
 
-    return (json.dumps(List))
+    return (issuesCollection)
 #########################################################
 #########################################################
 
