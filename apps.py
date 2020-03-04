@@ -144,8 +144,8 @@ def ziptomap():
         location = {}
         message = {'greeting':'POST worked  !'}
         data = request.get_data().decode("utf-8")
-        # data1 = getLatLon(data)
-        data1 = getLatLon(data)
+        ###data1 = getLatLon(data)
+        data1 = getAll(data)
         return data1
     else:
         message = {'greeting':'Bummer  !'}

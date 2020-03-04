@@ -1,7 +1,7 @@
 var L_LIST = d3.select("#locations");
 //console.log(Location)
 L_LIST.on("change", handleChange_01 );
-
+var ProjectList;
 
 function handleChange_01 (d){
     console.log("A button was clicked!");
@@ -16,10 +16,18 @@ function handleChange_01 (d){
             body: JSON.stringify({"greeting": "Hello from the browser!"})
 
         }).then(function (response) {
-            console.log('POST response: ', response);
+            //console.log('POST response: ', response);
             //document.getElementById('jsonProject').value = response;
-            yyy(response)();
-            return response;
+            var i;
+           ProjectList = JSON.parse(response);
+            
+            for (i = 0; i < ProjectList.length; i++) 
+                { 
+                    console.log(ProjectList[i]);
+                    placeMarker(ProjectList[i])
+                }; 
+            // yyy(response);
+            //return response;
         });
         // .then (yyy(response))
   }
@@ -82,7 +90,25 @@ function yyy(inValue) {
         
     }
 //   );
-  
+    /////////////////////////////
+    function placeMarker(inValue) {
+        //var B_call = document.getElementById('jsonProject').value;
+        //var B_call = inValue;
+        //console.log ('This is the location  ',JSON.parse(B_call));   
+        //var JsonLoc = JSON.parse(B_call); 
+        var location = inValue;
+        console.log(location.latitude, location.longitude );
+        L.marker([location.latitude, location.longitude]).bindPopup("<h6>Project Name: " + 
+        location.name + "<hr>" +
+        location.value + "<br/>" +
+        location.city + "<br/>" +
+        location.county +", " + location.state  +       
+        "</h6>")
+        .addTo(myMap);
+        
+        
+    }
+//   );  
 // }
 //populateDate(getUniqueValues(tableData,"postal_code"));
 //populateLocations(inArray)
