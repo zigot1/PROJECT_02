@@ -69,7 +69,7 @@
                 //////////////////////////////////////////////////////////
                 "getzip": function (){
                         //console.log("A button was clicked!");
-                        //console.log(document.getElementById("locations").value);
+                        // console.log(document.getElementById("locations").value);
                         fetch('/ziptomap')
                       },
                 //////////////////////////////////////////////////////////
@@ -253,8 +253,8 @@
                     // logInButton.value = text
                 },
                 "showJson": function (text) {
-                    // let logInButton = document.getElementById("jsonReturn")
-                    // logInButton.value = text
+                    let logInButton = document.getElementById("jsonReturn")
+                    logInButton.value = text
                 }
             }
         </script>
@@ -308,8 +308,8 @@
         <!-- <br /><br />
         <textarea id="jsonReturn"></textarea>
         <br/> -->
-        <!-- <h3>Json Return</h3>
-        <textarea id="jsonProject"></textarea>   -->
+        <!-- <!-- <h3>Json Return</h3> -->
+        <!-- <textarea id="jsonProject"></textarea>   -->
         <!-- <button id="GetProject" onclick="MyStuff.getProject()">Get A Project</button>  
         <br /><br /> -->
         <div class="rounded shadow-lg bg-dark" id="map"></div>

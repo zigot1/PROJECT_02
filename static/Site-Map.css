@@ -61,10 +61,17 @@ a {
     transform: translateY(4em);
 }
 
-#Location_LIST p label{
+#Location_LIST {
   font-size: 25px;
-  font-weight: lighter;
   color: #A61414;
+  transform: translateX(31em);
+  width: 200px;
+}
+
+
+#Location_LIST p label {
+  font-size: 25px;
+  font-weight: lighter !important;
 }
 
 #Location_LIST #locations {
@@ -72,6 +79,7 @@ a {
   font-size: 20px;
   font-weight: lighter;
   color: white;
+  transform: translateX(18px);
 }
 
 /*
@@ -89,7 +97,6 @@ html {
 
 #map {
   position: absolute;
-  align-items: center !important;
   transform: translateX(13%) translateY(5em) !important;
   width: 80%;
 }
@@ -167,7 +174,7 @@ nav {
 ==================================
 */
 
-.container, #map {
+.container, #map, #Location_LIST {
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 8s;
     -moz-animation: fadeIn ease 8s;
