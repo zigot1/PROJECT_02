@@ -35,6 +35,18 @@ a {
     color: inherit !important;
 }
 
+#top {
+  font-size: 25px;
+  color: #A61414;
+  font-weight: lighter;
+}
+
+ul li {
+  list-style-type: none !important;
+  color: #A61414;
+  margin-left: 4px;
+}
+
 /*
 ==================================
 2. Container
@@ -156,10 +168,10 @@ html {
 }
 
 #chart {
-  height: 500px;
+  /* height: 500px; */
   width: 500px;
   background-color: white !important;
-  transform: translateX(200%) translateY(62px);
+  transform: translateX(200%) translateY(58px);
 }
 
 /*
@@ -392,7 +404,7 @@ nav {
 #sticky-footer {
     /*Change translate when map is inserted*/
     height: 70px;
-    transform: translateY(25em);
+    transform: translateY(20em);
 }
 
 #sticky-footer #foot small {
