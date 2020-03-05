@@ -260,7 +260,7 @@
 
                         let top_sites = data.sort((a,b) => {
                                 a.value > b.value ? 1 : -1;
-                            }).slice(0,10);
+                            }).slice(0,10).reverse();
 
                             Object.entries(top_sites).forEach(([key,value]) =>{
                             //conditional statement
