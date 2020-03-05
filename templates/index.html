@@ -262,31 +262,17 @@
                                 a.value > b.value ? 1 : -1;
                             }).slice(0,10);
 
-                            // console.log(value.name);
-                            
-                        let site_cost = data.value;
-                            // let site_cost_sliced = site_cost.slice(0,10);
-                            //for site label
-                        // let site_name = value.name.slice(0,10);
-                        let value_multiplier = top_sites.value * 100;
+                            Object.entries(top_sites).forEach(([key,value]) =>{
+                            //conditional statement
 
-                            // console.log(list);
-                        console.log(top_sites)
-                        let trace = {
-                            x: value_multiplier,
-                            y: top_sites.name,
-                            text: top_sites.name,
-                            type: "bar"
-                        }
+                                let meta_ul = chart.append("ul");
+                                Object.entries(value).forEach(([key, value]) => {
+                                            let meta_li = meta_ul.append("li");
+                                            meta_li.text([key.toUpperCase() + ":  " + value]);
+                                        });
+            
+        }); 
 
-                            let site_data = [trace];
-
-                            let bar_layout = {
-                                title: "Sites",
-                                yaxis: {title: "Value ($)"} 
-                            }
-
-                        Plotly.newPlot("chart", site_data, bar_layout);
                         
                         
                     });
@@ -355,6 +341,7 @@
         <div class="rounded shadow-lg bg-dark" id="map"></div>
         <div class="rounded shadow-lg bg-light" id="chart">
             <!--Append Chart Here-->
+            <h4 id="top">Top 10 Sites</h6>
         </div>
         <!-- <button id="getMaps" onclick="MyStuff.getMaps()">Launch Map Pages</button>  -->
         <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
