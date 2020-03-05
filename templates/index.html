@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <!--Link stylesheet and font apis-->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Site-Map.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
@@ -248,7 +249,55 @@
                     let logInButton = document.getElementById("jsonReturn")
                     logInButton.value = text
                 }
+                
             }
+
+            function issues_chart() {
+                    d3.json("static/issues_data.json").then(function(data){
+                        // console.log(data);
+
+                        let chart = d3.select("#chart");
+
+                        Object.entries(data).forEach(([key, value]) => {
+                            // console.log(value.name);
+                            
+                            let site_cost = data.value;
+                            // let site_cost_sliced = site_cost.slice(0,10);
+                            //for site label
+                            let site_name = value.name.slice(0,10);
+                            
+
+
+                            let list = [];
+                    
+
+                            // console.log(list);
+
+                            let top_sites = data.sort((a,b) => {
+                                a.value > b.value ? 1 : -1;
+                            }).slice(0,10);
+
+                            console.log(top_sites)
+                            let trace = {
+                                x: top_sites,
+                                y: site_name,
+                                text: site_name,
+                                type: "bar"
+                            }
+
+                            let site_data = [trace];
+
+                            let bar_layout = {
+                                title: "Sites",
+                                yaxis: {title: "Value ($)"} 
+                            }
+
+                            Plotly.newPlot("chart", site_data, bar_layout);
+                        });
+                        
+                    });
+                }
+            issues_chart();
         </script>
         <header>
             <nav id="hamburger">
