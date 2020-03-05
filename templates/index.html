@@ -158,18 +158,13 @@
                              method: 'POST',
                             // A JSON payload
                             body: JSON.stringify({
-                                "greeting": "Hello from the browser!"
+                                "greeting": "Returning Project Data!"
                                 })
-                                }).then(function (response) { // At this point, Flask has printed our JSON
-                                    //logInButton.value = response.text();
-                                return response.text();
+                                }).then(function (response) { 
+                                    return response.text();
                                 }).then(function (text) {
-
-                                console.log('POST response: ');
-
-                                // Should be 'OK' if everything was successful
-                                //console.log(JSON.parse(text));
-                                jsonReturn.value = text;
+                                    console.log('POST response: ');
+                                    jsonReturn.value = text;
                                 //populateLocations(JSON.parse(text))
                                 
                             });
@@ -184,14 +179,13 @@
                              method: 'POST',
                             // A JSON payload
                             body: JSON.stringify({
-                                "greeting": "Hello from the browser!"
+                                "greeting": "Returning Issues Data!"
                                 })
-                                }).then(function (response) { // At this point, Flask has printed our JSON
-                                    //logInButton.value = response.text();
-                                return response.text();
+                                }).then(function (response) { 
+                                    return response.text();
                                 }).then(function (text) {
-                                console.log('Issues response: ', text);
-                                jsonReturn.value = text;
+                                    console.log('Issues response: ');
+                                    jsonReturn.value = text;
                             });
                 },
                 ///////////////////////////////////////////////////////////////
