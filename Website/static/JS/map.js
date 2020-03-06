@@ -1,9 +1,40 @@
+//Load New Projects Data
+function map_locations() {
+    d3.json('static/JS/new_projects.json', function(pdata) {
+        console.log(pdata[0]);
 
-//Mapbox characteristics
+        let global_selection = d3.select("#site-drop").node().value;
+
+        let location_list = [];
+
+        Object.entries(pdata).forEach(function([key, value]) {
+            
+
+            let lat_lng = {name: value.name , latlng:[value.latitude , value.longitude]};
 
 
+            location_list.push(lat_lng);
 
 
+        });
+        console.log(location_list);
+        //Map-box characteristics
+        let boundaries = [
+            [85.051129, -200], // East coordinates
+            [-85.051129,190] // Northeast coordinates
+            ];
+        
+        function change_center(data) {
+            console.log(data);
+        }
+        
+        change_center(location_list);
+
+    });
+}
+
+map_locations();
+//Map-box characteristics
 let boundaries = [
     [85.051129, -200], // East coordinates
     [-85.051129,190] // Northeast coordinates
@@ -15,7 +46,7 @@ let myMap = L.map("map", {
   maxBounds: boundaries
 });
 
-let WWWW;
+// let WWWW;
 // Adding a tile layer (the background map image) to our map
 // We use the addTo method to add objects to our map
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -26,13 +57,14 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 
+//========================================================================
 
 function map_drop() {
     //Create universal selection in function
     let selected_value = d3.select("#site-drop").node().value;
     //========================================================================
     //Import json file
-    d3.json('static/JS/projects.json', function(err, data) {
+    d3.json('static/JS/new_projects.json', function(err, data) {
         if (err) console.log("Trouble loading data.");
         // console.log(data);
        
@@ -47,12 +79,12 @@ function map_drop() {
 
             Object.entries(data).forEach(([key, info]) => {
 
-                if (info.postal_code === selected_value) {
+                if (info.name === selected_value) {
                     console.log(info.postal_code);
                     let site_ul = info_selection.append("ul");
                     Object.entries(info).forEach(([key, value]) => {
                         let site_li = site_ul.append("li");
-                        site_li.text([key.toUpperCase() + ": " + value]);
+                        site_li.text([key.toUpperCase() + ":  " + value]);
                         });
                     }
                 });
@@ -68,15 +100,15 @@ function map_drop() {
  //========================================================================
 function init() {
     
-    d3.json('static/JS/projects.json', function(err, data) {
+    d3.json('static/JS/new_projects.json', function(err, data) {
         if (err) console.log("Trouble loading data.");
 
             let selection = d3.select("#site-drop");
 
             data.forEach((n) => { 
                 selection.append("option")
-                         .text(n.postal_code)
-                         .property("value", n.postal_code);
+                         .text(n.name)
+                         .property("value", n.name);
             });
     });
 
